@@ -1,0 +1,20 @@
+{
+  "name": "CHNND",
+  "short_name": "CHNND",
+  "start_url": "https://chnnd.ir",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "gold.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "gold.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
