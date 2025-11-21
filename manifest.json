@@ -1,7 +1,7 @@
 {
   "name": "CHNND",
   "short_name": "CHNND",
-  "start_url": "https://develop.chnnd.ir",
+  "start_url": "https://chnnd.ir",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0f172a",
