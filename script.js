@@ -29,16 +29,16 @@ const flagMap = {
 };
 
 $(function () {
-    Notification.requestPermission().then(p => {
-        if (p === "granted") {
-          new Notification("تست نوتیفیکیشن", {
-            body: "اگر اینو دیدی یعنی کار می‌کنه ✅",
-            icon: "https://via.placeholder.com/128"
-          });
-        } else {
-          console.log("اجازه داده نشد ❌");
-        }
-      });
+    // Notification.requestPermission().then(p => {
+    //     if (p === "granted") {
+    //       new Notification("تست نوتیفیکیشن", {
+    //         body: "اگر اینو دیدی یعنی کار می‌کنه ✅",
+    //         icon: "https://via.placeholder.com/128"
+    //       });
+    //     } else {
+    //       console.log("اجازه داده نشد ❌");
+    //     }
+    //   });
     $.ajax({
         url: "https://chnnd.ir/currency_call/getdata.php",
         method: 'GET',
@@ -137,4 +137,3 @@ if ("serviceWorker" in navigator) {
   window.onerror = function(message, source, lineno, colno, error) {
     document.body.innerHTML += `<p style="color:red">JS Error: ${message} at ${source}:${lineno}</p>`;
   };
-  
