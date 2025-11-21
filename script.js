@@ -133,33 +133,6 @@ if ("serviceWorker" in navigator) {
 
 
 
-  
-  function hlbutton(){
-    Notification.requestPermission().then(p => {
-        if (p === "granted") {
-          new Notification("تست نوتیفیکیشن", {
-            body: "اگر اینو دیدی یعنی کار می‌کنه ✅",
-            icon: "https://via.placeholder.com/128"
-          });
-        } else {
-          console.log("اجازه داده نشد ❌");
-        }
-      });
-        alert('hello');
-    if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js").then(() => {
-          console.log("Service Worker ثبت شد ✅");
-      
-          // صبر کن تا SW آماده بشه
-          navigator.serviceWorker.ready.then(reg => {
-            reg.active.postMessage({
-              title: "سلام مهراب!",
-              body: "این نوتیفیکیشن بدون سرویس پوش ساخته شده 🎉"
-            });
-          });
-        });
-      }
-  }
 
   window.onerror = function(message, source, lineno, colno, error) {
     document.body.innerHTML += `<p style="color:red">JS Error: ${message} at ${source}:${lineno}</p>`;
