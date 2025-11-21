@@ -29,6 +29,16 @@ const flagMap = {
 };
 
 $(function () {
+    Notification.requestPermission().then(p => {
+        if (p === "granted") {
+          new Notification("تست نوتیفیکیشن", {
+            body: "اگر اینو دیدی یعنی کار می‌کنه ✅",
+            icon: "https://via.placeholder.com/128"
+          });
+        } else {
+          console.log("اجازه داده نشد ❌");
+        }
+      });
     $.ajax({
         url: "https://chnnd.ir/currency_call/getdata.php",
         method: 'GET',
@@ -121,3 +131,21 @@ if ("serviceWorker" in navigator) {
     .then(() => console.log("Service Worker registered"));
 }
 
+
+
+  
+  function hlbutton(){
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js").then(() => {
+          console.log("Service Worker ثبت شد ✅");
+      
+          // صبر کن تا SW آماده بشه
+          navigator.serviceWorker.ready.then(reg => {
+            reg.active.postMessage({
+              title: "سلام مهراب!",
+              body: "این نوتیفیکیشن بدون سرویس پوش ساخته شده 🎉"
+            });
+          });
+        });
+      }
+  }
