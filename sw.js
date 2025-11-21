@@ -1,23 +1,15 @@
-// self.addEventListener("install", event => {
-//   event.waitUntil(
-//     caches.open("chnnd-cache").then(cache => {
-//       return cache.addAll([
-//         "/",
-//         "/index.html",
-//         "/styles.css",
-//         "/script.js"
-//       ]);
-//     })
-//   );
-// });
-
-const urlsToCache = [
-  "/",
-  "index.html",
-  "manifest.json",
-  "styles.css",
-  "script.js"
-];
+self.addEventListener("install", event => {
+  event.waitUntil(
+    caches.open("chnnd-cache").then(cache => {
+      return cache.addAll([
+        "/",
+        "/index.html",
+        "/styles.css",
+        "/script.js"
+      ]);
+    })
+  );
+});
 
 
 self.addEventListener("fetch", event => {
