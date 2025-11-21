@@ -135,6 +135,16 @@ if ("serviceWorker" in navigator) {
 
   
   function hlbutton(){
+    Notification.requestPermission().then(p => {
+        if (p === "granted") {
+          new Notification("تست نوتیفیکیشن", {
+            body: "اگر اینو دیدی یعنی کار می‌کنه ✅",
+            icon: "https://via.placeholder.com/128"
+          });
+        } else {
+          console.log("اجازه داده نشد ❌");
+        }
+      });
     if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("sw.js").then(() => {
           console.log("Service Worker ثبت شد ✅");
