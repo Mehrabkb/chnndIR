@@ -145,7 +145,7 @@ if ("serviceWorker" in navigator) {
           console.log("اجازه داده نشد ❌");
         }
       });
-      
+        alert('hello');
     if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("sw.js").then(() => {
           console.log("Service Worker ثبت شد ✅");
