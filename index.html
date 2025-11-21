@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords"
+    <meta name="keywords"
         content="قیمت لحظه ای, نرخ ارز, قیمت طلا, قیمت سکه, دلار, یورو, بازار ارز, مظنه, بها, نرخ آنلاین, قیمت زنده">
     <meta name="description"
         content="سایت chnnd.ir مرجع قیمت لحظه‌ای ارز، طلا و سکه. مشاهده نرخ زنده دلار، یورو، انس جهانی و رمزارزها با به‌روزرسانی سریع و دقیق.">
@@ -19,17 +19,36 @@
 </head>
 
 <body>
-    <h1 class="h1 p-5">Chand?!
-    </h1>
-    <div class="container">
-        <tgju
-        type="ticker-tap"
-        items="398096,398097,535605,398115,398102,137121,137203"
-        columns="dot"
-        speed="35"
-        token="webservice"
-    ></tgju>
-    <script src="https://api.tgju.org/v1/widget/v2" defer></script>
+
+    <header class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light.bg-gradient  header-top mt-2 ">
+            <a class="navbar-brand h1 bg-warning rounded text-light p-2 " href="#">Chand?!</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">صفحه اصلی </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html" target="_blank">سرویس ها</a>
+                    </li>
+                </ul>
+                <div  class="login d-flex align-item-center">
+                    <button class="btn btn-warning">
+                        ثبت نام | ورود
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container mt-5">
+        <tgju type="ticker-tap" items="398096,398097,535605,398115,398102,137121,137203" columns="dot" speed="35"
+            token="webservice"></tgju>
+        <script src="https://api.tgju.org/v1/widget/v2" defer></script>
     </div>
     <div class="container">
         <div class="row main">

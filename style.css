@@ -221,3 +221,7 @@ body {
 html[dir="rtl"] .footer .row>div:nth-child(2) {
     text-align: start !important;
 }
+
+.header-top{
+    justify-content: space-between;
+}
