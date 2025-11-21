@@ -161,37 +161,7 @@ if ("serviceWorker" in navigator) {
       }
   }
 
-
-
-  async function testSafariNotification() {
-    try {
-      if (!("Notification" in window)) {
-        console.error("❌ مرورگر از Notification API پشتیبانی نمی‌کند.");
-        return;
-      }
-  
-      const permission = await Notification.requestPermission();
-      console.log("🔔 وضعیت دسترسی:", permission);
-  
-      if (permission === "granted") {
-        try {
-          new Notification("تست Safari", {
-            body: "اگر اینو دیدی یعنی کار می‌کنه ✅",
-            icon: "icons/icon-192.png"
-          });
-          console.log("✅ نوتیفیکیشن ساخته شد.");
-        } catch (err) {
-          console.error("❌ خطا در ساخت نوتیفیکیشن:", err);
-        }
-      } else if (permission === "denied") {
-        console.warn("⚠️ کاربر دسترسی رو رد کرده.");
-      } else {
-        console.warn("⚠️ کاربر هنوز انتخاب نکرده (default).");
-      }
-    } catch (err) {
-      console.error("❌ خطای کلی:", err);
-    }
-  }
-  
-  testSafariNotification();
+  window.onerror = function(message, source, lineno, colno, error) {
+    document.body.innerHTML += `<p style="color:red">JS Error: ${message} at ${source}:${lineno}</p>`;
+  };
   
