@@ -1,3 +1,4 @@
+// <<<<<<< HEAD:js/scripts/script.js
 const flagMap = {
     "USD": "fi fi-us",       // دلار آمریکا
     'EUR': "fi fi-eu",       // یورو (اتحادیه اروپا)
