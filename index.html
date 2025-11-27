@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -30,34 +30,81 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarText">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">صفحه اصلی</a>  
+                        <a class="nav-link" href="#">صفحه اصلی</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="services.html">سرویس ها</a>
                     </li>
                 </ul>
                 <div class="login d-flex align-items-center">
-                    <button class="btn btn-warning">ثبت نام | ورود</button>
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#loginModal">ثبت نام |
+                        ورود</button>
                 </div>
             </div>
         </nav>
     </header>
 
+    <div class="container">
 
+        <div class="modal fade" id="loginModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Welcome Back!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group position-relative">
+                                <label for="phone" class="form-label">شماره تلفن همراه</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="09123456789"
+                                    required>
+                                <small id="phoneError" class="text-danger" style="display:none;">
+                                    شماره وارد شده صحیح نیست
+                                </small>
+                            </div>
+
+                            <button class="btn btn-outline-secondary mt-2" type="button" id="getCodeBtn">
+                                دریافت کد فعالسازی
+                            </button>
+
+
+                            <!-- اینپوت کد فعالسازی (اول مخفی) -->
+                            <div class="form-group mt-3 d-none" id="activationCodeGroup">
+                                <label for="activationCode" class="form-label">کد فعالسازی</label>
+                                <input type="number" class="form-control" id="activationCode" name="activationCode"
+                                    placeholder="کد ارسال شده را وارد کنید" required>
+                            </div>
+
+                            <button class="btn btn-warning w-100 mt-3 d-none" type="submit" id="loginBtn">
+                                ورود
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
     <div class="container mt-5">
         <tgju type="ticker-tap" items="398096,398097,535605,398115,398102,137121,137203" columns="dot" speed="35"
             token="webservice"></tgju>
         <script src="https://api.tgju.org/v1/widget/v2" defer></script>
-    <h1 class="h1 p-5">Chand?!
-        <button class="btn btn-primary" onclick="alertBtnClick()">اطلاع رسانی</button>
-    </h1>
-    
+        <h1 class="h1 p-5">Chand?!
+            <button class="btn btn-primary" onclick="alertBtnClick()">اطلاع رسانی</button>
+        </h1>
+
     </div>
     <div class="container">
         <div class="row main">
 
         </div>
     </div>
+
+
+
+
     <footer class="footer bg-dark text-white mt-5">
         <div class="container py-4">
             <div class="row align-items-center gy-3">

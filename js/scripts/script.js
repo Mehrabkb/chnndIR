@@ -32,14 +32,14 @@ const flagMap = {
 $(function () {
     Notification.requestPermission().then(p => {
         if (p === "granted") {
-          new Notification("تست نوتیفیکیشن", {
-            body: "اگر اینو دیدی یعنی کار می‌کنه ✅",
-            icon: "https://via.placeholder.com/128"
-          });
+            new Notification("تست نوتیفیکیشن", {
+                body: "اگر اینو دیدی یعنی کار می‌کنه ✅",
+                icon: "https://via.placeholder.com/128"
+            });
         } else {
-          console.log("اجازه داده نشد ❌");
+            console.log("اجازه داده نشد ❌");
         }
-      });
+    });
     $.ajax({
         url: "https://chnnd.ir/currency_call/getdata.php",
         method: 'GET',
@@ -96,46 +96,80 @@ $(function () {
                     `);
             });
         },
-        error: function(xhr, status, error) {
-        console.error("خطا در AJAX:", {
-            status: xhr.status,
-            statusText: xhr.statusText,
-            error: error,
-            response: xhr.responseText
-        });
-        
-        // نمایش خطا به کاربر
-        if (xhr.status === 0) {
-            alert("خطای شبکه: اتصال به سرور برقرار نشد");
-        } else if (xhr.status === 404) {
-            alert("آدرس API یافت نشد");
-        } else if (xhr.status === 500) {
-            alert("خطای سرور");
-        } else {
-            alert("خطای ناشناخته: " + xhr.status);
-        }
-    },
+        error: function (xhr, status, error) {
+            console.error("خطا در AJAX:", {
+                status: xhr.status,
+                statusText: xhr.statusText,
+                error: error,
+                response: xhr.responseText
+            });
+
+            // نمایش خطا به کاربر
+            if (xhr.status === 0) {
+                alert("خطای شبکه: اتصال به سرور برقرار نشد");
+            } else if (xhr.status === 404) {
+                alert("آدرس API یافت نشد");
+            } else if (xhr.status === 500) {
+                alert("خطای سرور");
+            } else {
+                alert("خطای ناشناخته: " + xhr.status);
+            }
+        },
     })
-});
-function addThousandSeparator(num) {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-$(document).ready(function () {
     $(".radio-btn").on("click", function () {
         $(".radio-inner").toggleClass("active");
         $("body").toggleClass("dark");
     })
-})
+
+    sendCodeBtnClicked();
+});
+function addThousandSeparator(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js")
-    .then(() => console.log("Service Worker registered"));
+    navigator.serviceWorker.register("sw.js")
+        .then(() => console.log("Service Worker registered"));
 }
 
 
 
 
-  window.onerror = function(message, source, lineno, colno, error) {
+window.onerror = function (message, source, lineno, colno, error) {
     document.body.innerHTML += `<p style="color:red">JS Error: ${message} at ${source}:${lineno}</p>`;
-  };
-  
+};
+
+function sendCodeBtnClicked() {
+
+    $(document).ready(function () {
+        $("#getCodeBtn").on("click", function () {
+            let phone = $("#phone").val();
+            let regex = /^09[0-9]{9}$/; // باید با 09 شروع بشه و 11 رقم باشه
+
+            if (!regex.test(phone)) {
+                // نمایش خطا
+                $("#phone").addClass("input-error");
+                $("#phoneError").fadeIn();
+
+                // بعد از 1 ثانیه کلاس لرزش حذف بشه تا دوباره کار کنه
+                setTimeout(() => {
+                    $("#phone").removeClass("input-error");
+                }, 1000);
+            } else {
+                $("#phoneError").fadeOut();
+
+                // نمایش اینپوت کد فعالسازی
+                $("#activationCodeGroup").removeClass("d-none").hide().slideDown(500);
+
+                // شماره readonly بشه
+                $("#phone").prop("readonly", true);
+
+                $("#loginBtn").removeClass("d-none").hide().fadeIn(500);
+
+                // دکمه غیرفعال بشه
+                $(this).prop("disabled", true);
+            }
+        });
+    });
+
+}
