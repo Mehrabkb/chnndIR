@@ -63,6 +63,17 @@
     <div class="container">
         <div class="row main">
 
+            <section id="goldSection" class="col-12 mb-5">
+                <h2 class="h2">Golds</h2>
+                <hr>
+                <div class="row" id="goldContainer"></div>
+            </section>
+
+            <section id="currencySection" class="col-12 mb-5">
+                <h2 class="h2">Currencies</h2>
+                <hr>
+                <div class="row" id="currencyContainer"></div>
+            </section>
         </div>
     </div>
 

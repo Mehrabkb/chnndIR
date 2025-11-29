@@ -47,53 +47,55 @@ $(function () {
             result = JSON.parse(result);
             // console.log(result.gold);
             let golds = result.gold;
-            let main = $(".main");
-            main.append(`<h2 class="col-12 h2">Golds</h2>`);
-            main.append('<hr>');
+            let goldContainer = $("#goldContainer")
 
             golds.forEach(element => {
                 let percent_color = element.change_percent >= 0 ? "red" : "green";
                 let percent_class = element.change_percent >= 0 ? "percent_inc" : "percent_dec";
-                main.append(`<div class="col-11 col-md-2 border p-3 rounded m-3">
-                <div class="row align-items-center">
-                    <div class="col-3">
-                        <img src='images/gold.png' class='rounded-circle' width='50'>
-                    </div>
-                    <div class="col-9 text-end">
-                        <h4 class="h6 text-end">${element.name_en}</h4>
-                        <span class="text-end" style="font-size:0.6rem;">${element.name}</span>
-                    </div>
-                    <div class="col-12 mt-3">
-                        <h5 class="${percent_class}" style="color:${percent_color}">${element.change_percent}</h5>
-                        <h2 class="price number-separator">${addThousandSeparator(element.price)}</h2>
-                    </div>
-                </div>
-            </div>
-                    `);
+
+                goldContainer.append(`
+                  <div class="col-11 col-md-2 border p-3 rounded m-3">
+                      <div class="row align-items-center">
+                       <div class="col-3">
+                     <img src='images/gold.png' class='rounded-circle' width='50'>
+                     </div>
+                  <div class="col-9 text-end">
+                <h4 class="h6 text-end">${element.name_en}</h4>
+                <span class="text-end" style="font-size:0.6rem;">${element.name}</span>
+               </div>
+                <div class="col-12 mt-3">
+                <h5 class="${percent_class}" style="color:${percent_color}">${element.change_percent}</h5>
+                <h2 class="price number-separator">${addThousandSeparator(element.price)}</h2>
+               </div>
+              </div>
+           </div>
+           `);
             });
             let currencies = result.currency;
-            main.append(`<h2 class="col-12 h2">Currencies</h2>`);
-            main.append('<hr>');
+            let currencyContainer = $("#currencyContainer");
+
             currencies.forEach(element => {
                 let percent_color = element.change_percent >= 0 ? "red" : "green";
                 let percent_class = element.change_percent >= 0 ? "percent_inc" : "percent_dec";
-                let span = element.symbol != "USDT_IRT" ? `<span class="${flagMap[element.symbol]} rounded-circle h3 border"></span>` : `<img src='images/tether.webp' class='rounded-circle' width='50'>`;
-                main.append(`<div class="col-11 col-md-2 border p-3 rounded m-3">
-                <div class="row align-items-center">
-                    <div class="col-3">
-                        ${span}
-                    </div>
-                    <div class="col-9 text-end">
-                        <h4 class="h6 text-end">${element.name_en}</h4>
-                        <span class="text-end" style="font-size:0.6rem;">${element.name}</span>
-                    </div>
-                    <div class="col-12 mt-3">
-                        <h5 class="${percent_class}" style="color:${percent_color}">${element.change_percent}</h5>
-                        <h2 class="price number-separator">${addThousandSeparator(element.price)}</h2>
-                    </div>
-                </div>
-            </div>
-                    `);
+                let span = element.symbol != "USDT_IRT"
+                    ? `<span class="${flagMap[element.symbol]} rounded-circle h3 border"></span>`
+                    : `<img src='images/tether.webp' class='rounded-circle' width='50'>`;
+
+                currencyContainer.append(`
+    <div class="col-11 col-md-2 border p-3 rounded m-3">
+      <div class="row align-items-center">
+        <div class="col-3">${span}</div>
+        <div class="col-9 text-end">
+          <h4 class="h6 text-end">${element.name_en}</h4>
+          <span class="text-end" style="font-size:0.6rem;">${element.name}</span>
+        </div>
+        <div class="col-12 mt-3">
+          <h5 class="${percent_class}" style="color:${percent_color}">${element.change_percent}</h5>
+          <h2 class="price number-separator">${addThousandSeparator(element.price)}</h2>
+        </div>
+      </div>
+    </div>
+  `);
             });
         },
         error: function (xhr, status, error) {
