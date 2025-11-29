@@ -21,79 +21,43 @@
 <body>
 
     <header class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light bg-gradient header-top mt-2" style="direction: rtl;">
-            <a class="navbar-brand h1 bg-warning rounded text-light p-2" href="#">Chand?!</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light bg-gradient header-top mt-2 align-items-center"
+            style="direction: rtl;">
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+                <a class="navbar-brand h1 bg-warning rounded text-light p-2" href="index.html">Chand?!</a>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarText">
+            <div class="collapse navbar-collapse d-flex flex-column flex-lg-row justify-content-between align-items-center"
+                id="navbarText">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">صفحه اصلی</a>
+                        <a class="nav-link" href="index.html">صفحه اصلی</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="services.html">سرویس ها</a>
                     </li>
                 </ul>
                 <div class="login d-flex align-items-center">
-                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#loginModal">ثبت نام |
-                        ورود</button>
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        ثبت نام | ورود
+                    </button>
+
                 </div>
             </div>
         </nav>
     </header>
 
-    <div class="container">
 
-        <div class="modal fade" id="loginModal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Welcome Back!</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group position-relative">
-                                <label for="phone" class="form-label">شماره تلفن همراه</label>
-                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="09123456789"
-                                    required>
-                                <small id="phoneError" class="text-danger" style="display:none;">
-                                    شماره وارد شده صحیح نیست
-                                </small>
-                            </div>
-
-                            <button class="btn btn-outline-secondary mt-2" type="button" id="getCodeBtn">
-                                دریافت کد فعالسازی
-                            </button>
-
-
-                            <!-- اینپوت کد فعالسازی (اول مخفی) -->
-                            <div class="form-group mt-3 d-none" id="activationCodeGroup">
-                                <label for="activationCode" class="form-label">کد فعالسازی</label>
-                                <input type="number" class="form-control" id="activationCode" name="activationCode"
-                                    placeholder="کد ارسال شده را وارد کنید" required>
-                            </div>
-
-                            <button class="btn btn-warning w-100 mt-3 d-none" type="submit" id="loginBtn">
-                                ورود
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     </div>
     <div class="container mt-5">
         <tgju type="ticker-tap" items="398096,398097,535605,398115,398102,137121,137203" columns="dot" speed="35"
             token="webservice"></tgju>
         <script src="https://api.tgju.org/v1/widget/v2" defer></script>
-        <h1 class="h1 p-5">Chand?!
-            <button class="btn btn-primary" onclick="alertBtnClick()">اطلاع رسانی</button>
-        </h1>
+
 
     </div>
     <div class="container">
@@ -137,10 +101,16 @@
             </div>
         </div>
     </footer>
+    <?php include 'includes/loginModal.php'; ?>
+
+
+
     <script src="js/jquery/jquery.min.js"></script>
     <script src="js/bootstrapJS/bootstrap.bundle.min.js"></script>
     <script src="js/scripts/easy-number-separator.js"></script>
     <script src="js/scripts/script.js"></script>
+
+
 
 
 
