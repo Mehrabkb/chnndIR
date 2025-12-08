@@ -21,30 +21,32 @@
 <body>
 
     <header class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light bg-gradient header-top mt-2 align-items-center"
-            style="direction: rtl;">
-            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center">
-                <a class="navbar-brand h1 bg-warning rounded text-light p-2" href="index.html">Chand?!</a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-flex flex-column flex-lg-row justify-content-between align-items-center"
-                id="navbarText">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">صفحه اصلی</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">سرویس ها</a>
-                    </li>
-                </ul>
-                <div class="login d-flex align-items-center">
-                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#loginModal">
-                        ثبت نام | ورود
-                    </button>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light bg-gradient mt-2" style="direction: rtl;">
+            <div class="container-fluid">
+                <!-- برند -->
+                <a class="navbar-brand h1 bg-warning rounded text-light p-2" href="index.php">Chand?!</a>
 
+                <!-- دکمه سه‌خط -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- منو -->
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.php">صفحه اصلی</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">سرویس ها</a>
+                        </li>
+                    </ul>
+                    <div class="login">
+                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            ثبت نام | ورود
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>
