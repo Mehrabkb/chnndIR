@@ -4,50 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords"
-        content="قیمت لحظه ای, نرخ ارز, قیمت طلا, قیمت سکه, دلار, یورو, بازار ارز, مظنه, بها, نرخ آنلاین, قیمت زنده">
+
+    <!-- عنوان و توضیحات -->
+    <title>قیمت لحظه‌ای ارز، طلا و سکه | Chand?!</title>
     <meta name="description"
-        content="سایت chnnd.ir مرجع قیمت لحظه‌ای ارز، طلا و سکه. مشاهده نرخ زنده دلار، یورو، انس جهانی و رمزارزها با به‌روزرسانی سریع و دقیق.">
+        content="مرجع قیمت لحظه‌ای ارز، طلا و سکه. مشاهده نرخ زنده دلار، یورو، انس جهانی و رمزارزها با به‌روزرسانی سریع.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="قیمت لحظه‌ای ارز، طلا و سکه | Chand?!">
+    <meta name="twitter:description" content="مشاهده نرخ زنده دلار، یورو، انس جهانی و رمزارزها با به‌روزرسانی سریع.">
+    <meta name="twitter:image" content="https://chnnd.ir/gold.png">
+
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="قیمت لحظه‌ای ارز، طلا و سکه | Chand?!">
+    <meta property="og:description" content="مشاهده نرخ زنده دلار، یورو، انس جهانی و رمزارزها با به‌روزرسانی سریع.">
+    <meta property="og:image" content="https://chnnd.ir/gold.png">
+    <meta property="og:url" content="https://chnnd.ir/">
+    <meta property="og:type" content="website">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Chand?!",
+    "url": "https://chnnd.ir",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://chnnd.ir/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+
     <link rel="icon" type="image/png" href="images/gold.png">
     <link rel="manifest" href="assets/manifest.json">
     <meta name="google-site-verification" content="9AIJw4t9O0qBm9VAn4NW9yG2Sg6Rx1S5P0Fq1Z6PQaA" />
-    <title>Chand?!</title>
+
+
     <link rel="stylesheet" href="css/bootstrapCSS/bootstrap.min.css">
     <link rel="stylesheet" href="css/stylesheet/style.css">
     <link rel="stylesheet" href="flags/css/flag-icons.min.css">
 
+    <script>
+        !function (e, t, n) { e.yektanetAnalyticsObject = n, e[n] = e[n] || function () { e[n].q.push(arguments) }, e[n].q = e[n].q || []; var a = t.getElementsByTagName("head")[0], r = new Date, c = "https://cdn.yektanet.com/superscript/tM3DcAGE/native-chnnd.ir-44874/yn_pub.js?v=" + r.getFullYear().toString() + "0" + r.getMonth() + "0" + r.getDate() + "0" + r.getHours(), s = t.createElement("link"); s.rel = "preload", s.as = "script", s.href = c, a.appendChild(s); var l = t.createElement("script"); l.async = !0, l.src = c, a.appendChild(l) }(window, document, "yektanet");
+    </script>
 </head>
 
 <body>
+    <header class="container sticky-top">
+        <nav class="navbar navbar-expand-lg bg-white mt-3 shadow-sm rounded" style="direction: rtl;">
+            <div class="container-fluid d-flex  align-items-center top">
 
-    <header class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light bg-gradient mt-2" style="direction: rtl;">
-            <div class="container-fluid">
-                <!-- برند -->
-                <a class="navbar-brand h1 bg-warning rounded text-light p-2" href="index.php">Chand?!</a>
-
-                <!-- دکمه سه‌خط -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <!-- لوگو و برند -->
+                <div class="d-flex align-items-center gap-2">
+                    <img src="images/brand.png" alt="لوگو" class="logo-img" style="width: 150px;">
+                </div>
 
                 <!-- منو -->
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-end">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.php">صفحه اصلی</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html">سرویس ها</a>
-                        </li>
-                    </ul>
-                    <div class="login">
-                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#loginModal">
-                            ثبت نام | ورود
-                        </button>
-                    </div>
+                <div class="d-none d-lg-flex gap-4 top-menu">
+                    <a href="index.php" class="nav-link text-secondary fw-semibold fs-5">خانه</a>
+                    <span style="width:2px; height:25px; background: #e2e2e2; " ></span>
+                    <a href="#" class="nav-link text-secondary fw-semibold fs-5 ">چند</a>
+                    <span style="width:2px; height:25px; background: #e2e2e2; " ></span>
+                    <a href="https:/blog.chnnd.ir" class="nav-link text-secondary fw-semibold fs-5 ">بلاگ</a>
+
                 </div>
+
+                <button type="button" class="btn btn-outline-warning d-flex justify-items-center">ورود | ثبت نام</button>
             </div>
         </nav>
     </header>
@@ -78,8 +105,6 @@
             </section>
         </div>
     </div>
-
-
 
 
     <footer class="footer bg-dark text-white mt-5">
@@ -117,13 +142,10 @@
     <?php include 'includes/loginModal.php'; ?>
 
 
-
     <script src="js/jquery/jquery.min.js"></script>
     <script src="js/bootstrapJS/bootstrap.bundle.min.js"></script>
     <script src="js/scripts/easy-number-separator.js"></script>
     <script src="js/scripts/script.js"></script>
-
-
 
 
 

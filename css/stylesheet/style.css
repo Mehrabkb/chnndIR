@@ -176,7 +176,6 @@ body {
     background: #f5f5f5 !important;
 }
 
-
 .percent_inc::before {
     content: "+";
 }
@@ -236,7 +235,7 @@ html[dir="rtl"] .footer .row>div:nth-child(2) {
 }
 
 .modal-header {
-    background: linear-gradient(135deg, #f0ad4e,#fcbd65 );
+    background: linear-gradient(135deg, #f0ad4e, #fcbd65);
     padding: 20px;
     border: none;
     color: white;
