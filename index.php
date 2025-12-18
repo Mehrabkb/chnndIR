@@ -55,7 +55,7 @@
 </head>
 
 <body>
-    <header class="container sticky-top">
+    <header class="container sticky-top p-2">
         <nav class="navbar navbar-expand-lg bg-white mt-3 shadow-sm rounded" style="direction: rtl;">
             <div class="container-fluid d-flex  align-items-center top">
 
@@ -67,14 +67,15 @@
                 <!-- منو -->
                 <div class="d-none d-lg-flex gap-4 top-menu">
                     <a href="index.php" class="nav-link text-secondary fw-semibold fs-5">خانه</a>
-                    <span style="width:2px; height:25px; background: #e2e2e2; " ></span>
+                    <span style="width:2px; height:25px; background: #e2e2e2; "></span>
                     <a href="#" class="nav-link text-secondary fw-semibold fs-5 ">چند</a>
-                    <span style="width:2px; height:25px; background: #e2e2e2; " ></span>
+                    <span style="width:2px; height:25px; background: #e2e2e2; "></span>
                     <a href="https:/blog.chnnd.ir" class="nav-link text-secondary fw-semibold fs-5 ">بلاگ</a>
 
                 </div>
 
-                <button type="button" class="btn btn-outline-warning d-flex justify-items-center">ورود | ثبت نام</button>
+                <button type="button" class="btn btn-outline-warning d-flex justify-items-center">ورود | ثبت
+                    نام</button>
             </div>
         </nav>
     </header>
@@ -86,9 +87,42 @@
         <tgju type="ticker-tap" items="398096,398097,535605,398115,398102,137121,137203" columns="dot" speed="35"
             token="webservice"></tgju>
         <script src="https://api.tgju.org/v1/widget/v2" defer></script>
-
-
     </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <div class="card priceCard p-3 d-flex flex-column align-items-center position-relative" id="18kGold">
+                    <img src="images/goldcard.jpg" class="mb-2" alt="" >
+                    
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <div class="card priceCard p-3 d-flex flex-column align-items-center position-relative" >
+                    <img src="images/imamicoin.jpg" class="mb-2" alt="">
+                    <div class="d-flex flex-column justify-content-between w-100 align-items-center" id="coinContainer">
+                        
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-3 mb-3">
+                <div class="card priceCard p-3 d-flex flex-column align-items-center position-relative">
+                    <img src="images/ouncegold.webp" class="mb-2" alt="">
+                    <div class="d-flex flex-column justify-content-between w-100 align-items-center" id="ounceContainer">
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-3 mb-3">
+                <div class="card priceCard p-3 d-flex flex-column align-items-center position-relative">
+                    <img src="images/ouncegold.webp" class="mb-2" alt="">
+                    <div class="d-flex flex-column justify-content-between w-100 align-items-center" id="meltedGold">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row main">
 

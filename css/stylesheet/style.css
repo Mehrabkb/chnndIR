@@ -5,6 +5,15 @@ Last Updated: 2010-09-17
 Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
+@font-face {
+  font-family: Yekan; /* set name */
+  src: url(fonts/Yekan.tff); /* url of the font */
+}
+
+
+*{
+    font-family: Yekan;
+}
 
 html,
 body,
@@ -399,4 +408,29 @@ html[dir="rtl"] .footer .row>div:nth-child(2) {
 .input-error {
     border: 2px solid red !important;
     animation: shake 0.3s;
+}
+
+
+
+.priceCard::before {
+    content: "";
+    background-color: #e5e539;
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    height: 45px;
+    z-index: 0;
+}
+
+.priceCard img{
+    border-radius: 50%;
+    border: 5px solid white;
+    z-index: 1;
+    max-width: 70px;
+    width: 65px;
+    height: 65px;
+}
+.priceCard .pricePercent{
+    color: red;
 }

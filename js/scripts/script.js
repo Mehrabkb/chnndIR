@@ -45,14 +45,52 @@ $(function () {
         method: 'GET',
         success: function (result) {
             result = JSON.parse(result);
-            // console.log(result.gold);
+            console.log(result.gold);
             let golds = result.gold;
             let goldContainer = $("#goldContainer")
-
+            let coinContainer = $("#coinContainer")
+            let gold18Container = $("#18kGold")
+            let ounceContainer = $("#ounceContainer")
+            let meltedGold = $("#meltedGold")
             golds.forEach(element => {
                 let percent_color = element.change_percent >= 0 ? "red" : "green";
                 let percent_class = element.change_percent >= 0 ? "percent_inc" : "percent_dec";
 
+                switch (element.symbol) {
+                    case 'IR_COIN_EMAMI': {
+                        coinContainer.append(`
+                            <h3 class="mb-4 fw-bold fs-5">${element.name}</h3>
+                        <span class="priceSymbol mb-2 fs-5">${addThousandSeparator(element.price)}</span>
+                        <span class="pricePercent ${percent_class} fs-6" style="color: ${percent_color};">${element.change_percent}%</span>
+                            `);
+                        break;
+                    };
+                    case 'IR_GOLD_18K': {
+                        gold18Container.append(`
+                            <h3 class="mb-4 fw-bold fs-5">${element.name}</h3>
+                        <span class="priceSymbol mb-2 fs-5">${addThousandSeparator(element.price)}</span>
+                        <span class="pricePercent ${percent_class} fs-6" style="color: ${percent_color};">${element.change_percent}%</span>
+                            `);
+                        break;
+                    }
+                    case 'XAUUSD': {
+                        ounceContainer.append(`
+                            <h3 class="mb-4 fw-bold fs-5">${element.name}</h3>
+                        <span class="priceSymbol mb-2 fs-5">${addThousandSeparator(element.price)}</span>
+                        <span class="pricePercent ${percent_class} fs-6" style="color: ${percent_color};">${element.change_percent}%</span>
+                            `);
+                        break;
+                    }
+                    case 'IR_GOLD_MELTED': {
+                        meltedGold.append(`
+                            <h3 class="mb-4 fw-bold fs-5">${element.name}</h3>
+                        <span class="priceSymbol mb-2 fs-5">${addThousandSeparator(element.price)}</span>
+                        <span class="pricePercent ${percent_class} fs-6" style="color: ${percent_color};">${element.change_percent}%</span>
+                            `);
+                        break;
+                    }
+
+                }
                 goldContainer.append(`
                   <div class="col-11 col-md-2 border p-3 rounded m-3">
                       <div class="row align-items-center">
