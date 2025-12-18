@@ -431,6 +431,7 @@ html[dir="rtl"] .footer .row>div:nth-child(2) {
     width: 65px;
     height: 65px;
     object-fit: cover;
+    display: block;
 }
 .priceCard .pricePercent{
     color: red;
