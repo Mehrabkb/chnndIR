@@ -77,8 +77,7 @@
 
                 </div>
 
-                <button type="button" class="btn btn-outline-warning d-flex justify-items-center">ورود | ثبت
-                    نام</button>
+                <button type="button" class="btn btn-outline-warning d-flex justify-items-center">ورود | ثبت نام</button>
             </div>
         </nav>
     </header>
