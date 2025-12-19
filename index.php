@@ -92,38 +92,45 @@
     <div class="container my-5">
         <div class="d-flex justify-content-between align-items-center my-3" dir="rtl">
             <h2 class="fs-4">قیمت لحظه ای طلا و سکه و انس</h2>
-            <a href="assets/goldlist.html" type="button" class="btn btn-primary fs-7">مشاهده لیست کامل طلا و سکه</a>
+            <a href="assets/goldlist.html" type="button" class="btn btn-primary fs-7 d-none d-md-inline-block">مشاهده
+                لیست کامل طلا و سکه</a>
         </div>
         <div class="row">
             <div class="col-md-3 mb-3">
                 <div class="card priceCard p-3 d-flex flex-column align-items-center position-relative" id="18kGold">
-                    <img src="images/goldcard.jpg" class="mb-2" alt="" >
-                    
+                    <img src="images/goldcard.jpg" class="mb-2" alt="">
+
                 </div>
             </div>
 
             <div class="col-md-3 mb-3">
-                <div class="card priceCard p-3 d-flex flex-column align-items-center position-relative" >
+                <div class="card priceCard p-3 d-flex flex-column align-items-center position-relative">
                     <img src="images/imamicoin.jpg" class="mb-2" alt="">
                     <div class="d-flex flex-column justify-content-between w-100 align-items-center" id="coinContainer">
-                        
+
                     </div>
                 </div>
             </div>
-             <div class="col-md-3 mb-3">
+            <div class="col-md-3 mb-3">
                 <div class="card priceCard p-3 d-flex flex-column align-items-center position-relative">
                     <img src="images/ouncegold.webp" class="mb-2" alt="">
-                    <div class="d-flex flex-column justify-content-between w-100 align-items-center" id="ounceContainer">
+                    <div class="d-flex flex-column justify-content-between w-100 align-items-center"
+                        id="ounceContainer">
                     </div>
                 </div>
             </div>
-             <div class="col-md-3 mb-3">
+            <div class="col-md-3 mb-3">
                 <div class="card priceCard p-3 d-flex flex-column align-items-center position-relative">
                     <img src="images/ouncegold.webp" class="mb-2" alt="">
                     <div class="d-flex flex-column justify-content-between w-100 align-items-center" id="meltedGold">
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="text-center mt-3 d-md-none">
+            <a href="assets/goldlist.html" type="button" class="btn btn-primary fs-7 w-100">
+                مشاهده لیست کامل طلا و سکه
+            </a>
         </div>
     </div>
 
