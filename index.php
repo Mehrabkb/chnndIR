@@ -92,7 +92,7 @@
     <div class="container my-5">
         <div class="d-flex justify-content-between align-items-center my-3" dir="rtl">
             <h2 class="fs-4">قیمت لحظه ای طلا و سکه و انس</h2>
-            <a href="assets/goldlist.html" type="button" class="btn btn-primary fs-7 d-none d-md-inline-block">مشاهده
+            <a href="pages/goldlist.html" type="button" class="btn btn-primary fs-7 d-none d-md-inline-block">مشاهده
                 لیست کامل طلا و سکه</a>
         </div>
         <div class="row">
