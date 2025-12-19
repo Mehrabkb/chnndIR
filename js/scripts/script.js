@@ -45,9 +45,8 @@ $(function () {
         method: 'GET',
         success: function (result) {
             result = JSON.parse(result);
-            console.log(result.gold);
+            // console.log(result.gold);
             let golds = result.gold;
-            let goldContainer = $("#goldContainer")
             let coinContainer = $("#coinContainer")
             let gold18Container = $("#18kGold")
             let ounceContainer = $("#ounceContainer")
@@ -55,7 +54,7 @@ $(function () {
             golds.forEach(element => {
                 let percent_color = element.change_percent >= 0 ? "red" : "green";
                 let percent_class = element.change_percent >= 0 ? "percent_inc" : "percent_dec";
-
+                
                 switch (element.symbol) {
                     case 'IR_COIN_EMAMI': {
                         coinContainer.append(`
@@ -91,23 +90,6 @@ $(function () {
                     }
 
                 }
-                goldContainer.append(`
-                  <div class="col-11 col-md-2 border p-3 rounded m-3">
-                      <div class="row align-items-center">
-                       <div class="col-3">
-                     <img src='images/gold.png' class='rounded-circle' width='50'>
-                     </div>
-                  <div class="col-9 text-end">
-                <h4 class="h6 text-end">${element.name_en}</h4>
-                <span class="text-end" style="font-size:0.6rem;">${element.name}</span>
-               </div>
-                <div class="col-12 mt-3">
-                <h5 class="${percent_class}" style="color:${percent_color}">${element.change_percent}</h5>
-                <h2 class="price number-separator">${addThousandSeparator(element.price)}</h2>
-               </div>
-              </div>
-           </div>
-           `);
             });
             let currencies = result.currency;
             let currencyContainer = $("#currencyContainer");
