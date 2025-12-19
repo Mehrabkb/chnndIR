@@ -43,6 +43,7 @@
 
 
     <link rel="manifest" href="assets/manifest.json">
+    <link rel="icon" type="image/png" href="images/brand-header.png">    
     <meta name="google-site-verification" content="9AIJw4t9O0qBm9VAn4NW9yG2Sg6Rx1S5P0Fq1Z6PQaA" />
 
 
@@ -62,7 +63,8 @@
 
                 <!-- لوگو و برند -->
                 <div class="d-flex align-items-center gap-2">
-                    <a href="index.php"><img src="images/brand.png" alt="لوگو" class="logo-img" style="width: 150px;"></a>
+                    <a href="index.php"><img src="images/brand.png" alt="لوگو" class="logo-img"
+                            style="width: 150px;"></a>
                 </div>
 
                 <!-- منو -->
@@ -82,6 +84,27 @@
     </header>
 
 
+    <!-- <div class="container my-5" dir="rtl">
+
+        <div class="row">
+            <div class="col-6">
+                <div class="topText px-3">
+                    <h1 class="fs-2 fw-bold ">قیمت لحظه‌ای طلا، سکه، دلار و ارزها</h1>
+                    <h2 class="fs-4 mt-1 fw-bold" style="color:#e5e539;">chnnd | چند</h2>
+                    <p class="fs-5 lh-base mt-3">
+                        سایت چند ارائه‌دهنده سرویس لحظه‌ای قیمت‌ها و تبدیل ارزها با دقیق‌ترین و به‌روزترین نرخ‌هاست.
+                        ما در چند قصد داریم به‌زودی امکاناتی مانند اطلاع‌رسانی از طریق پیامک و ارسال اعلان (نوتیفیکیشن)
+                        را فراهم کنیم تا همیشه از آخرین تغییرات بازار مطلع باشید.
+                        با چند، بهترین خدمات نرخ طلا، سکه و ارزها را تجربه کنید ❤️
+                    </p>
+                </div>
+            </div>
+            <div class="col-6">
+
+            </div>
+        </div>
+
+    </div> -->
 
     </div>
     <div class="container mt-5">
