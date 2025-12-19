@@ -71,6 +71,8 @@
                     <a href="#" class="nav-link text-secondary fw-semibold fs-5 ">چند</a>
                     <span style="width:2px; height:25px; background: #e2e2e2; "></span>
                     <a href="https:/blog.chnnd.ir" class="nav-link text-secondary fw-semibold fs-5 ">بلاگ</a>
+                    <span style="width:2px; height:25px; background: #e2e2e2; "></span>
+                    <a href="pages/tabdil.html" class="nav-link text-secondary fw-semibold fs-5 ">تبدیل ارز</a>
 
                 </div>
 
