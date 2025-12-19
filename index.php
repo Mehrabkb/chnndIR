@@ -16,6 +16,8 @@
     <meta name="twitter:description" content="مشاهده نرخ زنده دلار، یورو، انس جهانی و رمزارزها با به‌روزرسانی سریع.">
     <meta name="twitter:image" content="https://chnnd.ir/gold.png">
 
+    <!-- No index no follow tag -->
+    <meta name="robots" content="noindex, nofollow">
 
 
     <!-- Open Graph -->
@@ -43,7 +45,7 @@
 
 
     <link rel="manifest" href="assets/manifest.json">
-    <link rel="icon" type="image/png" href="images/brand-header.png">    
+    <link rel="icon" type="image/png" href="images/brand-header.png">
     <meta name="google-site-verification" content="9AIJw4t9O0qBm9VAn4NW9yG2Sg6Rx1S5P0Fq1Z6PQaA" />
 
 
@@ -77,7 +79,8 @@
 
                 </div>
 
-                <button type="button" class="btn btn-outline-warning d-flex justify-items-center">ورود | ثبت نام</button>
+                <button type="button" class="btn btn-outline-warning d-flex justify-items-center">ورود | ثبت
+                    نام</button>
             </div>
         </nav>
     </header>
