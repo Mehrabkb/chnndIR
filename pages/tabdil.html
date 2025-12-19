@@ -22,10 +22,38 @@
     <link rel="stylesheet" href="../plugins/alertifyjs/css/alertify.rtl.css">
     <link rel="stylesheet" href="../plugins/alertifyjs/css/themes/semantic.min.css">
     <link rel="stylesheet" href="../plugins/select2/select2.min.css">
+    <link rel="stylesheet" href="../css/bootstrapCSS/bootstrap.min.css">
     <link rel="stylesheet" href="../css/stylesheet/tabdil.css" />
 </head>
 
 <body>
+    <header class="container sticky-top p-2">
+        <nav class="navbar navbar-expand-lg bg-white mt-3 shadow-sm rounded" style="direction: rtl;">
+            <div class="container-fluid d-flex  align-items-center top">
+
+                <!-- لوگو و برند -->
+                <div class="d-flex align-items-center gap-2">
+                    <a href="../index.php"><img src="../images/brand.png" alt="لوگو" class="logo-img"
+                            style="width: 150px;"></a>
+                </div>
+
+                <!-- منو -->
+                <div class="d-none d-lg-flex gap-4 top-menu">
+                    <a href="../pages/goldlist.html" class="nav-link text-secondary fw-semibold fs-5">طلا و سکه </a>
+                    <span style="width:2px; height:25px; background: #e2e2e2; "></span>
+                    <a href="https://blog.chnnd.ir" class="nav-link text-secondary fw-semibold fs-5 ">بلاگ</a>
+                    <span style="width:2px; height:25px; background: #e2e2e2; "></span>
+                    <a href="../pages/tabdil.html" class="nav-link text-secondary fw-semibold fs-5 ">تبدیل ارز</a>
+
+                </div>
+
+                <button type="button" class="btn btn-outline-warning d-flex justify-items-center">ورود | ثبت
+                    نام</button>
+            </div>
+        </nav>
+    </header>
+
+
     <main class="container">
         <h1>مبدل نرخ ارز</h1>
 
@@ -58,8 +86,6 @@
 
                 <div class="actions">
                     <button type="submit" class="btn primary tabdil">تبدیل</button>
-                    <a href="https://chnnd.ir" id="back" class="btn">بازگشت به چند</a>
-                    <a href="https://blog.chnnd.ir" id="blog" class="btn">وبلاگ</a>
                 </div>
             </form>
 
@@ -75,6 +101,7 @@
     </main>
     <script src="../js/jquery/jquery.min.js"></script>
     <script src="../plugins/alertifyjs/alertify.min.js"></script>
+    <script src="../js/bootstrapJS/bootstrap.bundle.min.js"></script>
     <script src="../plugins/select2/select2.min.js"></script>
     <script src="../js/scripts/tabdil.js"></script>
 </body>
