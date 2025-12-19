@@ -17,6 +17,7 @@
     <meta name="twitter:image" content="https://chnnd.ir/gold.png">
 
 
+
     <!-- Open Graph -->
     <meta property="og:title" content="قیمت لحظه‌ای ارز، طلا و سکه | Chand?!">
     <meta property="og:description" content="مشاهده نرخ زنده دلار، یورو، انس جهانی و رمزارزها با به‌روزرسانی سریع.">
@@ -61,16 +62,14 @@
 
                 <!-- لوگو و برند -->
                 <div class="d-flex align-items-center gap-2">
-                    <img src="images/brand.png" alt="لوگو" class="logo-img" style="width: 150px;">
+                    <a href="index.php"><img src="images/brand.png" alt="لوگو" class="logo-img" style="width: 150px;"></a>
                 </div>
 
                 <!-- منو -->
                 <div class="d-none d-lg-flex gap-4 top-menu">
-                    <a href="index.php" class="nav-link text-secondary fw-semibold fs-5">خانه</a>
+                    <a href="pages/goldlist.html" class="nav-link text-secondary fw-semibold fs-5">طلا و سکه </a>
                     <span style="width:2px; height:25px; background: #e2e2e2; "></span>
-                    <a href="#" class="nav-link text-secondary fw-semibold fs-5 ">چند</a>
-                    <span style="width:2px; height:25px; background: #e2e2e2; "></span>
-                    <a href="https:/blog.chnnd.ir" class="nav-link text-secondary fw-semibold fs-5 ">بلاگ</a>
+                    <a href="https://blog.chnnd.ir" class="nav-link text-secondary fw-semibold fs-5 ">بلاگ</a>
                     <span style="width:2px; height:25px; background: #e2e2e2; "></span>
                     <a href="pages/tabdil.html" class="nav-link text-secondary fw-semibold fs-5 ">تبدیل ارز</a>
 
