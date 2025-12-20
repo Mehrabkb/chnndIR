@@ -154,7 +154,7 @@
             </div>
         </div>
         <div class="text-center mt-3 d-md-none">
-            <a href="assets/goldlist.html" type="button" class="btn btn-primary fs-7 w-100">
+            <a href="pages/goldlist.html" type="button" class="btn btn-primary fs-7 w-100">
                 مشاهده لیست کامل طلا و سکه
             </a>
         </div>
