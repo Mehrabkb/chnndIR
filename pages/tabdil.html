@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>مبدل نرخ ارز</title>
+    <meta name="keywords"
+        content="تبدیل ارز, نرخ ارز, مبدل ارز, تبدیل دلار به ریال, تبدیل یورو به دلار, نرخ لحظه ای ارز, ماشین حساب ارز, currency converter, exchange rate, forex, تبدیل پول آنلاین">
+    <meta name="description"
+        content="مبدل آنلاین نرخ ارز با پشتیبانی از تبدیل تومان، دلار، یورو و سایر ارزها. تبدیل سریع و دقیق نرخ ارز به صورت لحظه‌ای.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="مبدل نرخ ارز | تبدیل آنلاین ارز">
+    <meta property="og:description" content="تبدیل سریع و آنلاین نرخ ارز با پشتیبانی از تومان، دلار و یورو.">
+    <meta property="og:url" content="https://chnnd.ir/currency-converter">
+    <meta property="og:site_name" content="چند">
+    <meta property="og:locale" content="fa_IR">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="content-language" content="fa">
+
+
+    <link rel="stylesheet" href="../plugins/alertifyjs/css/alertify.rtl.css">
+    <link rel="stylesheet" href="../plugins/alertifyjs/css/themes/semantic.min.css">
+    <link rel="stylesheet" href="../plugins/select2/select2.min.css">
+    <link rel="stylesheet" href="../css/bootstrapCSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/stylesheet/tabdil.css" />
+</head>
+
+<body>
+    <header class="container sticky-top p-2">
+        <nav class="navbar navbar-expand-lg bg-white mt-3 shadow-sm rounded" style="direction: rtl;">
+            <div class="container-fluid d-flex  align-items-center top">
+
+                <!-- لوگو و برند -->
+                <div class="d-flex align-items-center gap-2">
+                    <a href="../index.php"><img src="../images/brand.png" alt="لوگو" class="logo-img"
+                            style="width: 150px;"></a>
+                </div>
+
+                <!-- منو -->
+                <div class="d-none d-lg-flex gap-4 top-menu">
+                    <a href="../pages/goldlist.html" class="nav-link text-secondary fw-semibold fs-5">طلا و سکه </a>
+                    <span style="width:2px; height:25px; background: #e2e2e2; "></span>
+                    <a href="https://blog.chnnd.ir" class="nav-link text-secondary fw-semibold fs-5 ">بلاگ</a>
+                    <span style="width:2px; height:25px; background: #e2e2e2; "></span>
+                    <a href="../pages/tabdil.html" class="nav-link text-secondary fw-semibold fs-5 ">تبدیل ارز</a>
+
+                </div>
+
+                <button type="button" class="btn btn-outline-warning d-flex justify-items-center">ورود | ثبت
+                    نام</button>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="container">
+        <h1>مبدل نرخ ارز</h1>
+
+        <section class="card">
+            <form id="converter-form">
+                <div class="field">
+                    <label for="amount">مبلغ</label>
+                    <input type="number" id="amount" placeholder="مثلاً 100" min="0" step="1" required />
+                </div>
+
+                <div class="field-group">
+                    <div class="field">
+                        <label for="from">از ارز</label>
+                        <select id="from" class="list js-example-basic-single" required>
+                            <option selected disabled>انتخاب</option>
+                            <option value="Toman">تومان</option>
+                        </select>
+                    </div>
+
+                    <button type="button" id="swap" class="swap" aria-label="تعویض ارزها">⇄</button>
+
+                    <div class="field">
+                        <label for="to">به ارز</label>
+                        <select id="to" class="list js-example-basic-single" required>
+                            <option selected disabled>انتخاب</option>
+                            <option value="Toman">تومان</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn primary tabdil">تبدیل</button>
+                </div>
+            </form>
+
+            <div id="result" class="result" aria-live="polite">
+                نتیجه تبدیل اینجا نمایش داده می‌شود.
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <small>قدرت گرفته در <a href="https://chnnd.ir">چند</a></small>
+        </footer>
+    </main>
+    <script src="../js/jquery/jquery.min.js"></script>
+    <script src="../plugins/alertifyjs/alertify.min.js"></script>
+    <script src="../js/bootstrapJS/bootstrap.bundle.min.js"></script>
+    <script src="../plugins/select2/select2.min.js"></script>
+    <script src="../js/scripts/tabdil.js"></script>
+</body>
+
+</html>

@@ -1,10 +1,14 @@
-/*
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com
-Twitter: @rich_clark
-*/
+@font-face {
+    font-family: Yekan;
+    /* set name */
+    src: url(fonts/Yekan.tff);
+    /* url of the font */
+}
+
+
+* {
+    font-family: Yekan;
+}
 
 html,
 body,
@@ -177,47 +181,47 @@ body {
 }
 
 
-.percent_inc::before {
-    content: "+";
-}
 
-.percent_dec::before {
+.priceCard::before {
     content: "";
+    background-color: #e5e539;
+    border-radius: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    height: 70px;
+    z-index: 0;
 }
 
-.footer {
-    background: linear-gradient(180deg, #0f172a 0%, #0b1220 100%);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+.priceCard img {
+    border-radius: 50%;
+    border: 5px solid white;
+    z-index: 1;
+    max-width: 70px;
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    display: block;
 }
 
-.footer-link {
-    color: #e2e8f0;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.2s ease, transform 0.2s ease;
+.priceCard h3 {
+    z-index: 1;
+    margin-top: 10px;
 }
 
-.footer-link:hover {
-    color: #60a5fa;
-    transform: translateY(-1px);
+.priceCard .priceSymbol {
+    font-weight: bold;
+    color: #333;
+    z-index: 1;
 }
 
-.footer-divider {
-    border-color: rgba(255, 255, 255, 0.08);
+.priceCard .pricePercent {
+    font-weight: bold;
+    z-index: 1;
 }
 
-.social-link {
-    color: #cbd5e1;
-    font-size: 1.25rem;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.social-link:hover {
-    color: #60a5fa;
-    transform: translateY(-1px) scale(1.03);
-}
-
-/* پشتیبانی بهتر از حالت راست‌به‌چپ */
-html[dir="rtl"] .footer .row>div:nth-child(2) {
-    text-align: start !important;
+.priceCard .text-muted {
+    font-size: 0.9rem;
+    z-index: 1;
 }

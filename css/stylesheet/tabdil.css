@@ -1,0 +1,362 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+@font-face {
+  font-family: Yekan;
+  /* set name */
+  src: url(fonts/Yekan.tff);
+  /* url of the font */
+}
+
+
+* {
+  font-family: Yekan;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --accent: #22c55e;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #1f2937;
+  --focus: #38bdf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background: radial-gradient(900px 600px at 10% 10%, #0b1220, var(--bg));
+  color: var(--text);
+  font-family: "Vazirmatn", system-ui, sans-serif;
+}
+
+.container {
+  max-width: 720px;
+  margin: 5vh auto;
+  padding: 0 16px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.card {
+  background: linear-gradient(180deg, #0b1220 0%, var(--card) 100%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.field {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #0b1325;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--focus);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.field-group {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 10px;
+  align-items: end;
+}
+
+.swap {
+  align-self: end;
+  height: 44px;
+  width: 44px;
+  border-radius: 12px;
+  border: 1px dashed var(--border);
+  background: #0b1325;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s;
+}
+
+.swap:hover {
+  transform: rotate(180deg);
+  background: #0d1730;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.btn {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #0b1325;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #0d1730;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+  border: none;
+  color: #052e1b;
+  font-weight: 700;
+}
+
+.btn.primary:hover {
+  filter: brightness(1.05);
+}
+
+.result {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #0b1325;
+  border: 1px solid var(--border);
+  font-size: 1.05rem;
+  color: #e5e7eb  ;
+}
+
+.rate-info {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer {
+  margin-top: 16px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ریسپانسیو */
+@media (max-width: 560px) {
+  .field-group {
+    grid-template-columns: 1fr 44px 1fr;
+  }
+}
+
+.actions a#back {
+  text-decoration: none;
+  color: #000;
+  background: #FBC02D;
+}
+
+.actions a#blog {
+  text-decoration: none;
+  background: #283593;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.select2-container li {
+  color: #000 !important;
+}
+
+input {
+  color: #fff;
+}

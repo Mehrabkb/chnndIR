@@ -1,0 +1,40 @@
+/* استایل عمومی کارت‌ها */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* انیمیشن عمومی روی هاور */
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* هاور مخصوص سرویس زمان */
+.card.time:hover {
+  border: 2px solid #ffc107; /* زرد */
+  background: #fffbea;
+}
+
+/* هاور مخصوص سرویس قیمت */
+.card.price:hover {
+  border: 2px solid #17a2b8; /* آبی */
+  background: #e8f9fd;
+}
+
+/* هاور مخصوص سرویس طلایی */
+.card.gold:hover {
+  border: 2px solid #ff9800; /* نارنجی طلایی */
+  background: #fff3e0;
+}
+
+@media (min-width:768px ) and (max-width:991px){
+  .navbar-nav .nav-item {
+    width: 100%; 
+    text-align: center;
+  }
+
+  .login .btn{
+    width: 100%;
+  }
+}
