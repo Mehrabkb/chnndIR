@@ -40,7 +40,7 @@
   </script>
 
 
-    <link rel="icon" type="image/png" href="images/gold.png">
+
     <link rel="manifest" href="assets/manifest.json">
     <meta name="google-site-verification" content="9AIJw4t9O0qBm9VAn4NW9yG2Sg6Rx1S5P0Fq1Z6PQaA" />
 
