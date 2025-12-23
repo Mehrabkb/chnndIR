@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>مبدل نرخ ارز</title>
+  <meta name="keywords" content="تبدیل ارز, نرخ ارز, مبدل ارز, تبدیل دلار به ریال, تبدیل یورو به دلار, نرخ لحظه ای ارز, ماشین حساب ارز, currency converter, exchange rate, forex, تبدیل پول آنلاین">
+  <meta name="description" content="مبدل آنلاین نرخ ارز با پشتیبانی از تبدیل تومان، دلار، یورو و سایر ارزها. تبدیل سریع و دقیق نرخ ارز به صورت لحظه‌ای.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="مبدل نرخ ارز | تبدیل آنلاین ارز">
+<meta property="og:description" content="تبدیل سریع و آنلاین نرخ ارز با پشتیبانی از تومان، دلار و یورو.">
+<meta property="og:url" content="https://chnnd.ir/currency-converter">
+<meta property="og:site_name" content="چند">
+<meta property="og:locale" content="fa_IR">
+<meta name="robots" content="index, follow">
+<meta http-equiv="content-language" content="fa">
+
+
+  <link rel="stylesheet" href="plugins/alertifyjs/css/alertify.rtl.css">
+  <link rel="stylesheet" href="plugins/alertifyjs/css/themes/semantic.min.css">
+  <link rel="stylesheet" href="plugins/select2/select2.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>مبدل نرخ ارز</h1>
+
+    <section class="card">
+      <form id="converter-form">
+        <div class="field">
+          <label for="amount">مبلغ</label>
+          <input type="number" class="number-separator" id="amount" placeholder="مثلاً 100" min="0" step="1" required />
+        </div>
+
+        <div class="field-group">
+          <div class="field">
+            <label for="from">از ارز</label>
+            <select id="from" class="list js-example-basic-single" required>
+              <option selected disabled>انتخاب</option>
+              <option value="Toman">تومان</option>
+            </select>
+          </div>
+
+          <button type="button" id="swap" class="swap" aria-label="تعویض ارزها">⇄</button>
+
+          <div class="field">
+            <label for="to">به ارز</label>
+            <select id="to" class="list js-example-basic-single" required>
+              <option selected disabled>انتخاب</option>
+              <option value="Toman">تومان</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn primary tabdil">تبدیل</button>
+          <a href="https://chnnd.ir" id="back" class="btn">بازگشت به چند</a>
+          <a href="https://blog.chnnd.ir" id="blog" class="btn">وبلاگ</a>
+        </div>
+      </form>
+
+      <div id="result" class="result" aria-live="polite">
+        نتیجه تبدیل اینجا نمایش داده می‌شود.
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      <small>قدرت گرفته در <a href="https://chnnd.ir">چند</a></small>
+    </footer>
+  </main>
+  <script src="jquery.min.js"></script>
+  <script src="plugins/easy-number-separator.js"></script>
+  <script src="plugins/alertifyjs/alertify.min.js"></script>
+  <script src="plugins/select2/select2.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

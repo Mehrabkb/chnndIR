@@ -10,6 +10,7 @@ $.ajax({
         let golds = result.gold;
         let currency = result.currency;
         let cryptocurrency = result.cryptocurrency;
+
         let slcList = $('select.list');
         for(let i = 0 ; i < golds.length ; i++){
             slcList.append("<option value='"+golds[i].symbol+"'>"+ golds[i].name +"</option>");
@@ -30,14 +31,13 @@ $("form#converter-form").submit(function(e){
     let count = $("input#amount").val();
     let from = $("select#from").val();
     let to = $("select#to").val();
-    let result = $("div.result input");
+    let result = $("div.result");
     if(count < 1 || from == null || to == null){
         alertify.error("لطفا همه ی موارد را انتخاب کنید");
     }else if(from == to){
         alertify.error("هر دو مقدار نمیتوانند یکسان باشد");
     }else{
-        count = count.replace("," , "");
-        result.val(calculate(count , from , to));
+        result.html(calculate(count , from , to));
     }
 });
 

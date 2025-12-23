@@ -17,7 +17,7 @@
     <meta name="twitter:image" content="https://chnnd.ir/gold.png">
 
     <!-- No index no follow tag -->
-    <meta name="robots" content="noindex, nofollow">
+    <!-- <meta name="robots" content="noindex, nofollow"> -->
 
 
     <!-- Open Graph -->
