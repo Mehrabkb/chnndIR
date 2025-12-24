@@ -170,6 +170,12 @@
                 <hr>
                 <div class="row" id="currencyContainer"></div>
             </section>
+
+            <section id="currencySection" class="col-12 mb-5">
+                <h2 class="h2">Crypto currency</h2>
+                <hr>
+            <div id="cryptoContainer" class="row"></div>
+            </section>
         </div>
     </div>
 
