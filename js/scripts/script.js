@@ -125,7 +125,7 @@ $(function () {
             let cryptocurrencies = result.cryptocurrency;
             let cryptoContainer = $("#cryptoContainer");
 
-            
+
             console.log(result.cryptocurrency)
 
             cryptocurrencies.forEach(element => {
@@ -141,7 +141,8 @@ $(function () {
                 <div class="col-11 col-md-2 border p-3 rounded m-3">
                     <div class="row align-items-center">
                         <div class="col-3">
-                         <img src="${logoSrc}" class="rounded-circle" width="50" alt="${element.name_en} logo" style="width:30px;"></div>
+                            <img src="${logoSrc}" class="rounded-circle" width="50" alt="${element.name_en} logo" style="width:30px;">
+                         </div>
                         <div class="col-9 text-end">
                             <h4 class="h6 text-end">${element.name_en}</h4>
                             <span class="text-end" style="font-size:0.6rem;">${element.name}</span>
