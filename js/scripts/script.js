@@ -125,9 +125,13 @@ $(function () {
             let cryptocurrencies = result.cryptocurrency;
             let cryptoContainer = $("#cryptoContainer");
 
+            
+            console.log(result.cryptocurrency)
+
             cryptocurrencies.forEach(element => {
                 let percent_color = element.change_percent >= 0 ? "red" : "green";
                 let percent_class = element.change_percent >= 0 ? "percent_inc" : "percent_dec";
+                let logoSrc = `images/crypto/${element.symbol}.svg`;
 
                 let span = element.symbol != "USDT" ?
                     `<span class="${flagMap[element.symbol]} rounded-circle h3 border"></span>` :
@@ -136,7 +140,8 @@ $(function () {
                 cryptoContainer.append(`
                 <div class="col-11 col-md-2 border p-3 rounded m-3">
                     <div class="row align-items-center">
-                        <div class="col-3">${span}</div>
+                        <div class="col-3">
+                         <img src="${logoSrc}" class="rounded-circle" width="50" alt="${element.name_en} logo" style="width:30px;"></div>
                         <div class="col-9 text-end">
                             <h4 class="h6 text-end">${element.name_en}</h4>
                             <span class="text-end" style="font-size:0.6rem;">${element.name}</span>
