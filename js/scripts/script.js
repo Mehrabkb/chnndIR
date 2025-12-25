@@ -27,6 +27,27 @@ const flagMap = {
     'AZN': "fi fi-az", // منات آذربایجان
     'AMD': "fi fi-am", // درام ارمنستان
     'GEL': "fi fi-ge", // لاری گرجستان
+    BTC: "Bitcoin",
+    ETH: "Ethereum",
+    USDT: "Tether",
+    XRP: "XRP",
+    BNB: "BNB",
+    SOL: "Solana",
+    USDC: "USD Coin",
+    TRX: "TRON",
+    DOGE: "Dogecoin",
+    ADA: "Cardano",
+    LINK: "Chainlink",
+    XLM: "Stellar",
+    AVAX: "Avalanche",
+    SHIB: "Shiba Inu",
+    LTC: "Litecoin",
+    DOT: "Polkadot",
+    UNI: "Uniswap",
+    ATOM: "Cosmos",
+    FIL: "Filecoin",
+
+
 };
 
 $(function () {
@@ -40,6 +61,7 @@ $(function () {
     //         console.log("اجازه داده نشد ❌");
     //     }
     // });
+
     $.ajax({
         url: "https://chnnd.ir/currency_call/getdata.php",
         method: 'GET',
@@ -51,6 +73,7 @@ $(function () {
             let gold18Container = $("#18kGold");
             let ounceContainer = $("#ounceContainer");
             let meltedGold = $("#meltedGold");
+
 
             // اطلاعات طلا
             golds.forEach(element => {
@@ -93,40 +116,53 @@ $(function () {
                 }
             });
 
-            // اطلاعات ارزها
-            let currencies = result.currency;
-            let currencyContainer = $("#currencyContainer");
+            let currencies1 = result.currency;
+            let currencyTableBody = $("#currencyTableBody");
 
-            currencies.forEach(element => {
+            // پیدا کردن قیمت دلار یک بار بیرون حلقه
+            let usd = currencies1.find(c => c.symbol === "USD");
+            let usdPrice = usd ? usd.price : 1;
+
+            currencies1.slice(0, 9).forEach(element => {
+                if (element.symbol === "USDT_IRT") return;
+
                 let percent_color = element.change_percent >= 0 ? "red" : "green";
                 let percent_class = element.change_percent >= 0 ? "percent_inc" : "percent_dec";
-                let span = element.symbol != "USDT_IRT" ?
-                    `<span class="${flagMap[element.symbol]} rounded-circle h3 border"></span>` :
-                    `<img src='images/tether.webp' class='rounded-circle' width='50'>`;
 
-                currencyContainer.append(`
-                <div class="col-11 col-md-2 border p-3 rounded m-3">
-                    <div class="row align-items-center">
-                        <div class="col-3">${span}</div>
-                        <div class="col-9 text-end">
-                            <h4 class="h6 text-end">${element.name_en}</h4>
-                            <span class="text-end" style="font-size:0.6rem;">${element.name}</span>
-                        </div>
-                        <div class="col-12 mt-3">
-                            <h5 class="${percent_class}" style="color:${percent_color}">${element.change_percent}</h5>
-                            <h2 class="price number-separator">${addThousandSeparator(element.price)}</h2>
-                        </div>
-                    </div>
-                </div>
-            `);
+                let span = `<span class="${flagMap[element.symbol]} rounded-circle h4 border"></span>`;
+                let valueInUSD = (element.price / usdPrice).toFixed(2);
+
+                currencyTableBody.append(`
+        <tr>
+            <td class="align-middle text-center">${span}</td>
+            <td class="align-middle">
+                <h6>${element.name} (${element.symbol})</h6>
+            </td>
+            <td class="align-middle">
+                <h4 class="price number-separator">
+                    ${addThousandSeparator(element.price)}
+                </h4>
+                <h5 class="${percent_class}" style="color:${percent_color}">
+                    ${element.change_percent}%
+                </h5>
+            </td>
+            <td class="align-middle">
+               USD ${addThousandSeparator(valueInUSD)}
+            </td>
+        </tr>
+    `);
             });
 
+
+
+
             // اطلاعات ارزهای دیجیتال
+
             let cryptocurrencies = result.cryptocurrency;
             let cryptoContainer = $("#cryptoContainer");
 
 
-            console.log(result.cryptocurrency)
+            console.log(cryptocurrencies);
 
             cryptocurrencies.forEach(element => {
                 let percent_color = element.change_percent >= 0 ? "red" : "green";

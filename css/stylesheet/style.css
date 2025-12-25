@@ -6,13 +6,36 @@ Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
 @font-face {
-  font-family: Yekan; /* set name */
-  src: url(fonts/Yekan.tff); /* url of the font */
+    font-family: Yekan;
+    /* set name */
+    src: url(fonts/Yekan.tff);
+    /* url of the font */
+}
+@font-face {
+  font-family: Vazirmatn;
+  src: url('fonts/webfonts/Vazirmatn[wght].woff2') format('woff2 supports variations'),
+       url('fonts/webfonts/Vazirmatn[wght].woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+    font-family: 'VazirmatnFD';
+    src: url('fonts/webfonts/Vazir-Regular-FD.woff2') format('woff2');
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Shabnam'; 
+    src: url('fonts/Shabnam.tff') format('truetype');
+    font-style:normal ;
+    font-display: swap;
 }
 
 
-*{
-    font-family: Yekan;
+
+* {
+    font-family: 'VazirmatnFD' , Vazirmatn;
 }
 
 html,
@@ -423,7 +446,7 @@ html[dir="rtl"] .footer .row>div:nth-child(2) {
     z-index: 0;
 }
 
-.priceCard img{
+.priceCard img {
     border-radius: 50%;
     border: 5px solid white;
     z-index: 1;
@@ -433,6 +456,28 @@ html[dir="rtl"] .footer .row>div:nth-child(2) {
     object-fit: cover;
     display: block;
 }
-.priceCard .pricePercent{
+
+.priceCard .pricePercent {
     color: red;
 }
+
+.currency-table {
+    background-color: pink;
+}
+
+
+.currency-table thead {
+    background-color: #e5e539;
+    color: #333;
+    font-weight: bold;
+}
+
+.currency-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.currency-table tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.3s;
+}
+

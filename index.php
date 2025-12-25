@@ -71,7 +71,7 @@
 
                 <!-- منو -->
                 <div class="d-none d-lg-flex gap-4 top-menu">
-                    <a href="index.php" class="nav-link text-secondary fw-semibold fs-5">چند </a>
+                    <a href="index.php" class="nav-link text-secondary fw-semibold fs-5">صفحه اصلی </a>
                     <span style="width:2px; height:25px; background: #e2e2e2; "></span>
                     <a href="pages/goldlist.html" class="nav-link text-secondary fw-semibold fs-5">طلا و سکه </a>
                     <span style="width:2px; height:25px; background: #e2e2e2; "></span>
@@ -88,29 +88,7 @@
     </header>
 
 
-    <!-- <div class="container my-5" dir="rtl">
 
-        <div class="row">
-            <div class="col-6">
-                <div class="topText px-3">
-                    <h1 class="fs-2 fw-bold ">قیمت لحظه‌ای طلا، سکه، دلار و ارزها</h1>
-                    <h2 class="fs-4 mt-1 fw-bold" style="color:#e5e539;">chnnd | چند</h2>
-                    <p class="fs-5 lh-base mt-3">
-                        سایت چند ارائه‌دهنده سرویس لحظه‌ای قیمت‌ها و تبدیل ارزها با دقیق‌ترین و به‌روزترین نرخ‌هاست.
-                        ما در چند قصد داریم به‌زودی امکاناتی مانند اطلاع‌رسانی از طریق پیامک و ارسال اعلان (نوتیفیکیشن)
-                        را فراهم کنیم تا همیشه از آخرین تغییرات بازار مطلع باشید.
-                        با چند، بهترین خدمات نرخ طلا، سکه و ارزها را تجربه کنید ❤️
-                    </p>
-                </div>
-            </div>
-            <div class="col-6">
-
-            </div>
-        </div>
-
-    </div> -->
-
-    </div>
     <div class="container mt-5">
         <tgju type="ticker-tap" items="398096,398097,535605,398115,398102,137121,137203" columns="dot" speed="35"
             token="webservice"></tgju>
@@ -162,19 +140,36 @@
         </div>
     </div>
 
+    <div class="container my-5">
+        <div class="row" dir="rtl">
+            <div class="col-md-6 text-end bg-light p-3">
+                <h3 class="mb-4 text-center fs-4">لیست قیمت ارزها</h3>
+                <table class="table table-bordered table-striped text-center align-middle currency-table">
+                    <thead class="table-dark p-3">
+                        <tr>
+                            <th>آیکون</th>
+                            <th>نام ارز</th>
+                            <th>قیمت ارز</th>
+                            <th>یک دلار به چند؟</th>
+                        </tr>
+                    </thead>
+                    <tbody id="currencyTableBody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6 text-start p-3">
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row main">
 
-            <section id="currencySection" class="col-12 mb-5">
-                <h2 class="h2">Currencies</h2>
-                <hr>
-                <div class="row" id="currencyContainer"></div>
-            </section>
+        
 
             <section id="currencySection" class="col-12 mb-5">
                 <h2 class="h2">Crypto currency</h2>
                 <hr>
-            <div id="cryptoContainer" class="row"></div>
+                <div id="cryptoContainer" class="row"></div>
             </section>
         </div>
     </div>
