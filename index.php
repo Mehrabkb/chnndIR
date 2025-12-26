@@ -87,7 +87,7 @@
                 <button type="button" class="btn btn-outline-warning d-flex justify-items-center">ورود | ثبت
                     نام</button>
             </div>
-        </nav>
+        </nav> 
         <div class="bottom-bar">
       <ion-icon name="home-outline" class="icon" onclick="change(this)">
       </ion-icon>
@@ -233,7 +233,7 @@
     
     <?php include 'includes/loginModal.php'; ?>
 
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/jquery/jquery.min.js"></script>
     <script src="js/bootstrapJS/bootstrap.bundle.min.js"></script>
     <script src="js/scripts/easy-number-separator.js"></script>

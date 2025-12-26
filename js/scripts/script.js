@@ -180,12 +180,15 @@ $(function () {
         $(".radio-inner").toggleClass("active");
         $("body").toggleClass("dark");
     });
-    sendCodeBtnClicked();
-    function change(item) {
-        $('ion-icon').removeClass('active');   // همه کلاس active رو حذف می‌کنه
-        $(item).addClass('active');            // روی آیتم کلیک‌شده کلاس active اضافه می‌کنه
-    }
+   
 });
+function change(item){
+    const buttons = document.querySelectorAll('ion-icon');
+    buttons.forEach(function(obj){
+        obj.classList.remove("active");
+    });
+    item.classList.add("active");
+}
 
 
 function addThousandSeparator(num) {

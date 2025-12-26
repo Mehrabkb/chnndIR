@@ -469,11 +469,7 @@ html[dir="rtl"] .footer .row>div:nth-child(2) {
       display: none;
     }
   }
-  /*---------mobilemenu----------*/
-  body{
-    margin: 0;
-    background-color: #ffffff;
-}
+  /*---------mobile-menu----------*/
 .bottom-bar{
     background-color: #000000;
     margin-left: auto;
@@ -500,21 +496,50 @@ html[dir="rtl"] .footer .row>div:nth-child(2) {
 }
 
 @media (max-width: 768px) {
-    /* منوی بالایی مخفی شود */
     .top-menu {
         display: none !important;
     }
 
-    /* نسخه موبایل یا نوار پایین فعال شود */
     .bottom-bar {
         display: flex !important;
         justify-content: space-around;
-       
         padding: 10px 0;
         box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
         position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
+    }
+    .btn.btn-outline-warning {
+        display: none !important;
+    }
+    .d-flex{
+        justify-content: center !important;
+    }
+    .logo-img {
+        margin: 0 auto; 
+        display: block;
+    }
+    footer .row .col-12 {
+        text-align: center !important;
+    }
+
+    footer .footer-link {
+        justify-content: center !important;
+    }
+
+    footer .d-flex {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    footer .socials {
+        justify-content: center !important;
+    }
+
+}
+@media (min-width: 769px) {
+    .bottom-bar{
+        display: none !important;
     }
 }
