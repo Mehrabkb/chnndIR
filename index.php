@@ -56,6 +56,9 @@
     <script>
         !function (e, t, n) { e.yektanetAnalyticsObject = n, e[n] = e[n] || function () { e[n].q.push(arguments) }, e[n].q = e[n].q || []; var a = t.getElementsByTagName("head")[0], r = new Date, c = "https://cdn.yektanet.com/superscript/tM3DcAGE/native-chnnd.ir-44874/yn_pub.js?v=" + r.getFullYear().toString() + "0" + r.getMonth() + "0" + r.getDate() + "0" + r.getHours(), s = t.createElement("link"); s.rel = "preload", s.as = "script", s.href = c, a.appendChild(s); var l = t.createElement("script"); l.async = !0, l.src = c, a.appendChild(l) }(window, document, "yektanet");
     </script>
+        <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>ّ
 </head>
 
 <body>
@@ -84,11 +87,47 @@
                 <button type="button" class="btn btn-outline-warning d-flex justify-items-center">ورود | ثبت
                     نام</button>
             </div>
-        </nav>
+        </nav> 
+        <div class="bottom-bar">
+      <ion-icon name="home-outline" class="icon" onclick="change(this)">
+      </ion-icon>
+      <ion-icon name="notifications-outline" class="icon" onclick="change(this)">
+    </ion-icon>
+      <ion-icon name="stats-chart-outline" class="icon" onclick="change(this)">
+      </ion-icon>
+      <ion-icon name="repeat-outline" class="icon" onclick="change(this)">
+    </ion-icon>
+    <ion-icon name="person-outline" class="icon" onclick="change(this)">
+    </ion-icon>
+    </div>
     </header>
 
 
 
+<<<<<<< HEAD
+=======
+        <div class="row">
+            <div class="col-6">
+                <div class="topText px-3">
+                    <h1 class="fs-2 fw-bold ">قیمت لحظه‌ای طلا، سکه، دلار و ارزها</h1>
+                    <h2 class="fs-4 mt-1 fw-bold" style="color:#e5e539;">chnnd | چند</h2>
+                    <p class="fs-5 lh-base mt-3">
+                        سایت چند ارائه‌دهنده سرویس لحظه‌ای قیمت‌ها و تبدیل ارزها با دقیق‌ترین و به‌روزترین نرخ‌هاست.
+                        ما در چند قصد داریم به‌زودی امکاناتی مانند اطلاع‌رسانی از طریق پیامک و ارسال اعلان (نوتیفیکیشن)
+                        را فراهم کنیم تا همیشه از آخرین تغییرات بازار مطلع باشید.
+                        با چند، بهترین خدمات نرخ طلا، سکه و ارزها را تجربه کنید ❤️
+                    </p>
+                </div>
+            </div>
+            <div class="col-6">
+
+            </div>
+        </div>
+
+    </div> -->
+
+    
+>>>>>>> 29a06638b147ec4d23333a86921a197b41d4cfc0
     <div class="container mt-5">
         <tgju type="ticker-tap" items="398096,398097,535605,398115,398102,137121,137203" columns="dot" speed="35"
             token="webservice"></tgju>
@@ -207,9 +246,13 @@
             </div>
         </div>
     </footer>
+
+   
+    
+    
     <?php include 'includes/loginModal.php'; ?>
 
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/jquery/jquery.min.js"></script>
     <script src="js/bootstrapJS/bootstrap.bundle.min.js"></script>
     <script src="js/scripts/easy-number-separator.js"></script>

@@ -215,10 +215,17 @@ $(function () {
     $(".radio-btn").on("click", function () {
         $(".radio-inner").toggleClass("active");
         $("body").toggleClass("dark");
-    })
-
-    sendCodeBtnClicked();
+    });
+   
 });
+function change(item){
+    const buttons = document.querySelectorAll('ion-icon');
+    buttons.forEach(function(obj){
+        obj.classList.remove("active");
+    });
+    item.classList.add("active");
+}
+
 
 function addThousandSeparator(num) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
