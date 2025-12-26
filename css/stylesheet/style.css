@@ -469,4 +469,52 @@ html[dir="rtl"] .footer .row>div:nth-child(2) {
       display: none;
     }
   }
-  
+  /*---------mobilemenu----------*/
+  body{
+    margin: 0;
+    background-color: #ffffff;
+}
+.bottom-bar{
+    background-color: #000000;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 20em;
+    max-width: 30em;
+    border-radius: 20px 20px 0 0;
+    
+}
+.icon{
+    font-size: 1.5em;
+    padding: .5em;
+    margin: .5em;
+    margin-top: 0;
+    transition: .5s ease-in-out;
+    color: white;
+}
+.active{
+    transform: scale(1.25) translateY(-1em);
+    background: linear-gradient(135deg, rgb(183, 152, 0),#250c1a);
+    border-radius: 40%;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    /* منوی بالایی مخفی شود */
+    .top-menu {
+        display: none !important;
+    }
+
+    /* نسخه موبایل یا نوار پایین فعال شود */
+    .bottom-bar {
+        display: flex !important;
+        justify-content: space-around;
+       
+        padding: 10px 0;
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}

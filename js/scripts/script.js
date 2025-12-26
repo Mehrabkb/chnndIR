@@ -179,10 +179,14 @@ $(function () {
     $(".radio-btn").on("click", function () {
         $(".radio-inner").toggleClass("active");
         $("body").toggleClass("dark");
-    })
-
+    });
     sendCodeBtnClicked();
+    function change(item) {
+        $('ion-icon').removeClass('active');   // همه کلاس active رو حذف می‌کنه
+        $(item).addClass('active');            // روی آیتم کلیک‌شده کلاس active اضافه می‌کنه
+    }
 });
+
 
 function addThousandSeparator(num) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
