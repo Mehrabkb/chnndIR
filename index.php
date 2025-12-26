@@ -110,7 +110,7 @@
 
     </div> -->
 
-    </div>
+    
     <div class="container mt-5">
         <tgju type="ticker-tap" items="398096,398097,535605,398115,398102,137121,137203" columns="dot" speed="35"
             token="webservice"></tgju>
@@ -212,6 +212,27 @@
             </div>
         </div>
     </footer>
+
+    <nav class="mobile-tabbar">
+        <a href="#" class="active">
+          <span>🏠</span>
+          <small>خانه</small>
+         </a>
+         <a href="#">
+          <span>🔍</span>
+          <small>جستجو</small>
+        </a>
+        <a href="#">
+          <span>🛒</span>
+          <small>سبد</small>
+        </a>
+        <a href="#">
+          <span>👤</span>
+          <small>حساب</small>
+        </a>
+    </nav>
+    
+    
     <?php include 'includes/loginModal.php'; ?>
 
 

@@ -436,3 +436,37 @@ html[dir="rtl"] .footer .row>div:nth-child(2) {
 .priceCard .pricePercent{
     color: red;
 }
+/*mobile-tabbar*/
+.mobile-tabbar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    z-index: 1000;
+  }
+  
+  .mobile-tabbar a {
+    text-decoration: none;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  .mobile-tabbar a.active {
+    color: #0d6efd;
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-tabbar {
+      display: none;
+    }
+  }
+  
