@@ -205,7 +205,7 @@
                     <h2 class="h5 mb-1">Designed By:</h2>
                     <a class="footer-link d-inline-flex align-items-center gap-2" href="https://tehranbyte.ir/">
                     <i class="bi bi-globe"></i>
-                        Tehran Byte Group
+                        Tehran Byte 
                     </a>
                 </div>
             </div>
