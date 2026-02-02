@@ -56,9 +56,7 @@
     <script>
         !function (e, t, n) { e.yektanetAnalyticsObject = n, e[n] = e[n] || function () { e[n].q.push(arguments) }, e[n].q = e[n].q || []; var a = t.getElementsByTagName("head")[0], r = new Date, c = "https://cdn.yektanet.com/superscript/tM3DcAGE/native-chnnd.ir-44874/yn_pub.js?v=" + r.getFullYear().toString() + "0" + r.getMonth() + "0" + r.getDate() + "0" + r.getHours(), s = t.createElement("link"); s.rel = "preload", s.as = "script", s.href = c, a.appendChild(s); var l = t.createElement("script"); l.async = !0, l.src = c, a.appendChild(l) }(window, document, "yektanet");
     </script>
-        <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>ّ
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>ّ
 </head>
 
 <body>
@@ -87,19 +85,19 @@
                 <button type="button" class="btn btn-outline-warning d-flex justify-items-center">ورود | ثبت
                     نام</button>
             </div>
-        </nav> 
+        </nav>
         <div class="bottom-bar">
-      <ion-icon name="home-outline" class="icon" onclick="change(this)">
-      </ion-icon>
-      <ion-icon name="notifications-outline" class="icon" onclick="change(this)">
-    </ion-icon>
-      <ion-icon name="stats-chart-outline" class="icon" onclick="change(this)">
-      </ion-icon>
-      <ion-icon name="repeat-outline" class="icon" onclick="change(this)">
-    </ion-icon>
-    <ion-icon name="person-outline" class="icon" onclick="change(this)">
-    </ion-icon>
-    </div>
+            <ion-icon name="home-outline" class="icon" onclick="change(this)">
+            </ion-icon>
+            <ion-icon name="notifications-outline" class="icon" onclick="change(this)">
+            </ion-icon>
+            <ion-icon name="stats-chart-outline" class="icon" onclick="change(this)">
+            </ion-icon>
+            <ion-icon name="repeat-outline" class="icon" onclick="change(this)">
+            </ion-icon>
+            <ion-icon name="person-outline" class="icon" onclick="change(this)">
+            </ion-icon>
+        </div>
     </header>
 
 
@@ -172,14 +170,22 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-md-6 text-start p-3">
+            <div class="col-md-6 text-end p-3">
+                <div class="blog-widget-container">
+                    <div class="d-flex justify-content-between align-items-center mb-3 px-2">
+                        <h3 class="fs-5 fw-bold m-0">آخرین اخبار و مقالات</h3>
+                        <a href="https://blog.chnnd.ir/" class="text-decoration-none small fw-bold text-primary">مشاهده
+                            همه</a>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row main">
 
-        
+
 
             <section id="currencySection" class="col-12 mb-5">
                 <h2 class="h2">Crypto currency</h2>
@@ -204,8 +210,8 @@
                 <div class="col-12 col-md text-md-end text-center">
                     <h2 class="h5 mb-1">Designed By:</h2>
                     <a class="footer-link d-inline-flex align-items-center gap-2" href="https://tehranbyte.ir/">
-                    <i class="bi bi-globe"></i>
-                        Tehran Byte 
+                        <i class="bi bi-globe"></i>
+                        Tehran Byte
                     </a>
                 </div>
             </div>
@@ -223,9 +229,9 @@
         </div>
     </footer>
 
-   
-    
-    
+
+
+
     <?php include 'includes/loginModal.php'; ?>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

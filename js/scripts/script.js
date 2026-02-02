@@ -123,7 +123,7 @@ $(function () {
             let usd = currencies1.find(c => c.symbol === "USD");
             let usdPrice = usd ? usd.price : 1;
 
-            currencies1.slice(0, 9).forEach(element => {
+            currencies1.slice(0, 10).forEach(element => {
                 if (element.symbol === "USDT_IRT") return;
 
                 let percent_color = element.change_percent >= 0 ? "red" : "green";
@@ -210,17 +210,69 @@ $(function () {
                 alert("خطای ناشناخته: " + xhr.status);
             }
         },
+
     });
+
+    const wpUrl = 'https://blog.chnnd.ir/wp-json/wp/v2/posts?per_page=4&_embed';
+
+    function fetchLatestPosts() {
+        $.ajax({
+            url: wpUrl,
+            method: 'GET',
+            success: function (posts) {
+                const $container = $('.blog-widget-container');
+
+                // نگه داشتن هدر و حذف کارت‌های استاتیک قدیمی
+                const $header = $container.find('.d-flex.justify-content-between').first();
+                $container.empty().append($header);
+
+                $.each(posts, function (index, post) {
+                    // چک کردن وجود تصویر شاخص
+                    let imageUrl = 'https://via.placeholder.com/90'; // تصویر پیش‌فرض
+                    if (post._embedded && post._embedded['wp:featuredmedia']) {
+                        imageUrl = post._embedded['wp:featuredmedia'][0].source_url;
+                    }
+
+                    // تمیز کردن متن خلاصه (حذف تگ‌های HTML اضافی)
+                    const excerpt = post.excerpt.rendered.replace(/<[^>]*>?/gm, '').substring(0, 80) + '...';
+
+                    // تبدیل تاریخ به شمسی (با استفاده از متد داخلی مرورگر)
+                    const postDate = new Date(post.date).toLocaleDateString('fa-IR');
+                    const postHtml = `
+                        <a href="${post.link}" class="blog-card d-flex justify-content-between align-items-center p-3 mb-3 shadow-sm border rounded bg-white text-decoration-none" style="display: flex !important;">
+                            <div class="blog-content text-end">
+                                <h4 class="fs-6 fw-bold mb-2" style="color: #222;">${post.title.rendered}</h4>
+                                <p class="text-muted small mb-2" style="line-height: 1.6;">${excerpt}</p>
+                                <div class="text-secondary" style="font-size: 0.7rem;">${postDate}</div>
+                            </div>
+                            <div class="blog-image ms-3">
+                                <img src="${imageUrl}" alt="${post.title.rendered}" class="rounded" style="width: 90px; height: 90px; object-fit: cover;">
+                            </div>
+                        </a>
+                    `;
+
+                    $container.append(postHtml);
+                });
+            },
+            error: function (err) {
+                console.error('خطا در ارتباط با وردپرس:', err);
+            }
+        });
+    }
+    fetchLatestPosts();
 
     $(".radio-btn").on("click", function () {
         $(".radio-inner").toggleClass("active");
         $("body").toggleClass("dark");
     });
-   
+
+
+
+
 });
-function change(item){
+function change(item) {
     const buttons = document.querySelectorAll('ion-icon');
-    buttons.forEach(function(obj){
+    buttons.forEach(function (obj) {
         obj.classList.remove("active");
     });
     item.classList.add("active");
