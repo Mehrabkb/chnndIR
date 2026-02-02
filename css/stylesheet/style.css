@@ -548,24 +548,76 @@ html[dir="rtl"] .footer .row>div:nth-child(2) {
     color: white;
 }
 
-.blog-widget-container {
-    direction: rtl;
+/* تنظیمات عمومی برای کادرها */
+.blog-card {
+    display: flex !important;
+    flex-direction: row;
+    /* متن راست، تصویر چپ */
+    align-items: center;
+    overflow: hidden;
+    /* جلوگیری از بیرون زدگی */
+    min-height: 110px;
+    padding: 10px !important;
 }
 
+/* بخش محتوای متنی */
+.blog-content {
+    flex: 1;
+    /* اشغال تمام فضای باقی‌مانده */
+    min-width: 0;
+    /* جلوگیری از فشار متن به تصویر */
+    padding-left: 10px;
+    /* فاصله از تصویر سمت چپ */
+}
+
+.blog-content h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* کوتاه کردن تایتل اگر خیلی بلند بود */
+    font-size: 0.95rem;
+}
+
+.blog-content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* نمایش فقط ۲ خط از توضیحات */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+/* بخش تصویر */
+.blog-image {
+    flex-shrink: 0;
+    /* جلوگیری از کوچک شدن تصویر */
+}
+
+.blog-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* اصلاح چیدمان مخصوص موبایل */
 @media (max-width: 576px) {
-    .blog-widget-container .d-flex {
-        padding-right: 15px !important;
-        padding-left: 15px  !important;
+    .blog-widget-container .d-flex.justify-content-between {
+        display: flex !important;
+        justify-content: space-between !important;
+        width: 100%;
+        padding: 0 5px;
     }
 
-    .blog-widget-container h3 {
-        font-size: 1.1rem !important;
+    .blog-image img {
+        width: 70px;
+        /* تصویر کمی کوچک‌تر در موبایل */
+        height: 70px;
     }
 
-    .blog-widget-container .small {
-        font-size: 0.8rem !important;
-
-        white-space: nowrap;
+    .blog-content h4 {
+        font-size: 0.85rem;
     }
 }
 
