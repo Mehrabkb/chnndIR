@@ -238,6 +238,7 @@ $(function () {
 
                     // تبدیل تاریخ به شمسی (با استفاده از متد داخلی مرورگر)
                     const postDate = new Date(post.date).toLocaleDateString('fa-IR');
+                    console.log(post.title.rendered);
                     const postHtml = `
                         <a href="${post.link}" class="blog-card d-flex justify-content-between align-items-center p-3 mb-3 shadow-sm border rounded bg-white text-decoration-none" style="display: flex !important;">
                             <div class="blog-content text-end">
