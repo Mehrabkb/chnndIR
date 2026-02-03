@@ -464,7 +464,7 @@ html[dir="rtl"] .footer .row>div:nth-child(2) {
     color: red;
 }
 
-<<<<<<< HEAD .currency-table {
+HEAD .currency-table {
     background-color: pink;
 }
 
@@ -484,7 +484,6 @@ html[dir="rtl"] .footer .row>div:nth-child(2) {
     transition: 0.3s;
 }
 
-=======
 
 /*mobile-tabbar*/
 .mobile-tabbar {
@@ -618,6 +617,101 @@ html[dir="rtl"] .footer .row>div:nth-child(2) {
 
     .blog-content h4 {
         font-size: 0.85rem;
+    }
+}
+
+/* کانتینر اصلی ستون سمت چپ */
+#cryptoSpotlight {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 !important;
+    /* حذف پدینگ اضافی برای تراز شدن با لبه بالایی */
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* باکس تیره (بیت‌کوین و اتریوم) */
+.spotlight-inner {
+    background: #1a1a1a;
+    flex: 0 0 60%;
+    /* دقیقاً ۶۰ درصد ارتفاع را اشغال می‌کند */
+    border-radius: 1rem;
+    padding: 20px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* کانتینر کارت‌های زیر بخش تیره */
+#leftColumnCards {
+    flex: 1;
+    /* بقیه ۴۰ درصد فضا را می‌گیرد */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* فاصله بین دو کارت پایینی */
+}
+
+/* استایل عمومی تمامی کارت‌های کوچک (راست و چپ) */
+.crypto-mini-card {
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* مخصوص کارت‌های سمت چپ برای پر کردن فضا */
+#leftColumnCards .crypto-mini-card {
+    flex: 1;
+    /* تقسیم مساوی فضای باقی‌مانده بین دو کارت */
+    margin: 0 !important;
+}
+
+/* افکت هاور */
+.crypto-mini-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-color: #007bff;
+}
+
+/* تراز کردن متون به سمت چپ */
+.text-start {
+    text-align: left !important;
+}
+
+/* استایل آیکون‌ها و متون داخل کارت */
+.price-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.spotlight-header img {
+    width: 35px;
+    filter: drop-shadow(0 0 8px rgba(255, 193, 7, 0.3));
+}
+
+/* تنظیم گپ‌های بوت‌استرپ */
+.gap-3 {
+    gap: 1rem !important;
+}
+
+@media (max-width: 768px) {
+
+    /* اجبار به فاصله گرفتن قیمت و درصد در کارت‌های کوچک */
+    .crypto-mini-card .justify-content-between {
+        justify-content: space-between !important;
+    }
+
+    /* اجبار به فاصله گرفتن آیکون و نام در کادر مشکی */
+    .spotlight-inner .d-flex.justify-content-between {
+        justify-content: space-between !important;
+        width: 100%;
     }
 }
 

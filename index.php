@@ -187,10 +187,29 @@
 
 
 
-            <section id="currencySection" class="col-12 mb-5">
-                <h2 class="h2">Crypto currency</h2>
+            <section id="currencySection" class="col-12 mb-5 mt-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 class="h2 m-0">Crypto currency</h2>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Trending</button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Top Gainers</button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Watchlist</button>
+                    </div>
+                </div>
                 <hr>
-                <div id="cryptoContainer" class="row"></div>
+
+                <div class="row">
+                    <div class="col-12 col-lg-4 mb-4">
+                        <div id="cryptoSpotlight"
+                            class="spotlight-card p-4 h-100 shadow-sm border rounded-4 bg-dark text-white">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-8">
+                        <div id="cryptoContainer" class="row g-3">
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </div>

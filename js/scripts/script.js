@@ -157,40 +157,96 @@ $(function () {
 
 
             // اطلاعات ارزهای دیجیتال
+            let cryptoData = result.cryptocurrency;
+            let container = $("#cryptoContainer");
+            let spotlight = $("#cryptoSpotlight");
 
-            let cryptocurrencies = result.cryptocurrency;
-            let cryptoContainer = $("#cryptoContainer");
+            // ۱. جدا کردن BTC و ETH و حذف آن‌ها از لیست اصلی
+            let btc = cryptoData.find(c => c.symbol === "BTC");
+            let eth = cryptoData.find(c => c.symbol === "ETH");
+            let otherCoins = cryptoData.filter(coin => coin.symbol !== "BTC" && coin.symbol !== "ETH");
 
+            // ۲. جدا کردن ۲ ارز آخر برای ستون سمت چپ (مثلاً کوزموس و فایل‌کوین)
+            let leftColumnExtras = otherCoins.slice(-2);
+            let mainRightCoins = otherCoins.slice(0, -2);
 
-            console.log(cryptocurrencies);
-
-            cryptocurrencies.forEach(element => {
-                let percent_color = element.change_percent >= 0 ? "red" : "green";
-                let percent_class = element.change_percent >= 0 ? "percent_inc" : "percent_dec";
-                let logoSrc = `images/crypto/${element.symbol}.svg`;
-
-                let span = element.symbol != "USDT" ?
-                    `<span class="${flagMap[element.symbol]} rounded-circle h3 border"></span>` :
-                    `<img src='images/tether.webp' class='rounded-circle' width='50'>`;
-
-                cryptoContainer.append(`
-                <div class="col-11 col-md-2 border p-3 rounded m-3">
-                    <div class="row align-items-center">
-                        <div class="col-3">
-                            <img src="${logoSrc}" class="rounded-circle" width="50" alt="${element.name_en} logo" style="width:30px;">
-                         </div>
-                        <div class="col-9 text-end">
-                            <h4 class="h6 text-end">${element.name_en}</h4>
-                            <span class="text-end" style="font-size:0.6rem;">${element.name}</span>
-                        </div>
-                        <div class="col-12 mt-3">
-                            <h5 class="${percent_class}" style="color:${percent_color}">${element.change_percent}%</h5>
-                            <h2 class="price number-separator">${addThousandSeparator(element.price)}</h2>
+            // ۳. رندر محتوای ستون سمت چپ
+            spotlight.html(`
+    <div class="d-flex flex-column h-100">
+        <div class="spotlight-inner p-4 rounded-4 shadow-sm text-white mb-3" 
+             style="background: #1a1a1a; height: calc(60% - 10px); min-height: 280px;">
+            <div class="d-flex flex-column justify-content-center h-100 text-end">
+                
+                <div class="pb-2 border-bottom border-secondary border-opacity-25 mb-5">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <span class="badge bg-warning text-dark px-2" style="font-size:0.6rem;">BTC</span>
+                        <div class="d-flex align-items-center gap-2">
+                             <span class="mx-1" style="font-size:1.1rem; font-weight: 500;">بیت‌کوین</span> 
+                             <img src="images/crypto/BTC.svg" width="25">
                         </div>
                     </div>
+                    <div class="d-flex justify-content-between align-items-center gap-2 mt-3">
+                    <div class="${btc.change_percent >= 0 ? 'text-danger' : 'text-success'} small" style="font-size:1rem;">${btc.change_percent}%</div>
+                    <div class=" fs-5">${addThousandSeparator(btc.price)}</div>
+                    </div>
                 </div>
-            `);
+                
+                <div class="my-6">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <span class="badge bg-info text-dark px-2" style="font-size:0.6rem;">ETH</span>
+                        <div class="d-flex align-items-center gap-2">
+                             <span class="mx-1" style="font-size:0.85rem; font-weight: 500;">اتریوم</span> 
+                             <img src="images/crypto/ETH.svg" width="25">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center gap-2 mt-3">
+                        <div class="${eth.change_percent >= 0 ? 'text-danger' : 'text-success'} small" style="font-size:1rem;">${eth.change_percent}%</div>                    
+                        <div class=" fs-5">${addThousandSeparator(eth.price)}</div>
+                    </div>
+
+                </div>
+                
+
+            </div>
+        </div>
+
+        <div id="leftColumnCards" class="d-flex flex-column gap-3" style="height: 40%;"></div>
+    </div>
+`);
+
+            // ۴. رندر کردن کارت‌های زیر کادر مشکی
+            leftColumnExtras.forEach(coin => {
+                $("#leftColumnCards").append(createSingleCard(coin));
             });
+
+            // ۵. رندر کردن کارت‌های سمت راست
+            container.empty();
+            mainRightCoins.forEach(coin => {
+                container.append(`<div class="col-12 col-md-6 col-xl-4">${createSingleCard(coin)}</div>`);
+            });
+
+            // تابع کمکی برای ساخت کارت (دقیقاً مشابه هم)
+            function createSingleCard(coin) {
+                let color = coin.change_percent >= 0 ? "red" : "green";
+                return `
+        <div class="crypto-mini-card p-3 rounded-4 shadow-sm border bg-white h-100 d-flex flex-column justify-content-between">
+            <div class="d-flex align-items-center w-100 mb-2">
+                <img src="images/crypto/${coin.symbol}.svg" width="32" class="me-2">
+                
+                <div class="flex-grow-1 text-end">
+                    <div class="text-dark" style="font-size: 1.1rem; line-height: 1.1;">${coin.name_en}</div>
+                    <div class="text-muted fs-6 mt-1" style="font-size: 0.75rem;">${coin.name}</div>
+                </div>
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-end w-100 mt-2">
+                <div class="text-dark" style="font-size: 1.1rem;">${addThousandSeparator(coin.price)}</div>
+                <div  style="color: ${color}; font-size: 0.9rem;">${coin.change_percent}%</div>
+            </div>
+        </div>
+    `;
+            }
+
         },
         error: function (xhr, status, error) {
             console.error("خطا در AJAX:", {
@@ -238,7 +294,6 @@ $(function () {
 
                     // تبدیل تاریخ به شمسی (با استفاده از متد داخلی مرورگر)
                     const postDate = new Date(post.date).toLocaleDateString('fa-IR');
-                    console.log(post.title.rendered);
                     const postHtml = `
                         <a href="${post.link}" class="blog-card d-flex justify-content-between align-items-center p-3 mb-3 shadow-sm border rounded bg-white text-decoration-none" style="display: flex !important;">
                             <div class="blog-content text-end">
