@@ -195,7 +195,7 @@ $(function () {
                     <div class="d-flex justify-content-between align-items-center mb-1">
                         <span class="badge bg-info text-dark px-2" style="font-size:0.6rem;">ETH</span>
                         <div class="d-flex align-items-center gap-2">
-                             <span class="mx-1" style="font-size:0.85rem; font-weight: 500;">اتریوم</span> 
+                             <span class="mx-1" style="font-size:1.1rem; font-weight: 500;">اتریوم</span> 
                              <img src="images/crypto/ETH.svg" width="25">
                         </div>
                     </div>
