@@ -322,9 +322,6 @@ $(function () {
         $("body").toggleClass("dark");
     });
 
-
-
-
 });
 function change(item) {
     const buttons = document.querySelectorAll('ion-icon');

@@ -185,16 +185,10 @@
     <div class="container">
         <div class="row main">
 
-
-
             <section id="currencySection" class="col-12 mb-5 mt-4">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h2 class="h2 m-0">ارز های دیجیتال</h2>
-                    <div class="d-flex gap-2">
-                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Trending</button>
-                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Top Gainers</button>
-                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">Watchlist</button>
-                    </div>
+                <div class="d-flex justify-content-between align-items-center mb-3 flex-row-reverse">
+                    <h2 class="h2 m-0 ">ارز های دیجیتال</h2>
+ 
                 </div>
                 <hr>
 
