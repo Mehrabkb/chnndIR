@@ -66,7 +66,7 @@ $(function () {
         url: "../../currency_call/getdata.php",
         method: 'GET',
         success: function (result) {
-            result = JSON.parse(result);
+            // result = JSON.parse(result);
             // console.log(result.gold);
             let golds = result.gold;
             let coinContainer = $("#coinContainer");
