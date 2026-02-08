@@ -63,7 +63,7 @@ $(function () {
     // });
 
     $.ajax({
-        url: "https://chnnd.ir/currency_call/getdata.php",
+        url: "../../currency_call/getdata.php",
         method: 'GET',
         success: function (result) {
             result = JSON.parse(result);
