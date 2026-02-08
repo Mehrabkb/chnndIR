@@ -30,13 +30,14 @@ $("form#converter-form").submit(function(e){
     let count = $("input#amount").val();
     let from = $("select#from").val();
     let to = $("select#to").val();
-    let result = $("div.result");
+    let result = $("div.result input");
     if(count < 1 || from == null || to == null){
         alertify.error("لطفا همه ی موارد را انتخاب کنید");
     }else if(from == to){
         alertify.error("هر دو مقدار نمیتوانند یکسان باشد");
     }else{
-        result.html(calculate(count , from , to));
+        count = count.replace("," , "");
+        result.val(calculate(count , from , to));
     }
 });
 

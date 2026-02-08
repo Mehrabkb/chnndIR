@@ -58,6 +58,7 @@
     <script>
         !function (e, t, n) { e.yektanetAnalyticsObject = n, e[n] = e[n] || function () { e[n].q.push(arguments) }, e[n].q = e[n].q || []; var a = t.getElementsByTagName("head")[0], r = new Date, c = "https://cdn.yektanet.com/superscript/tM3DcAGE/native-chnnd.ir-44874/yn_pub.js?v=" + r.getFullYear().toString() + "0" + r.getMonth() + "0" + r.getDate() + "0" + r.getHours(), s = t.createElement("link"); s.rel = "preload", s.as = "script", s.href = c, a.appendChild(s); var l = t.createElement("script"); l.async = !0, l.src = c, a.appendChild(l) }(window, document, "yektanet");
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>ّ
 </head>
 
 <body>
@@ -73,6 +74,8 @@
 
                 <!-- منو -->
                 <div class="d-none d-lg-flex gap-4 top-menu">
+                    <a href="index.php" class="nav-link text-secondary fw-semibold fs-5">صفحه اصلی </a>
+                    <span style="width:2px; height:25px; background: #e2e2e2; "></span>
                     <a href="pages/goldlist.html" class="nav-link text-secondary fw-semibold fs-5">طلا و سکه </a>
                     <span style="width:2px; height:25px; background: #e2e2e2; "></span>
                     <a href="https://blog.chnnd.ir" class="nav-link text-secondary fw-semibold fs-5 ">بلاگ</a>
@@ -85,32 +88,20 @@
                     نام</button>
             </div>
         </nav>
+        <div class="bottom-bar">
+            <ion-icon name="home-outline" class="icon" onclick="change(this)">
+            </ion-icon>
+            <ion-icon name="notifications-outline" class="icon" onclick="change(this)">
+            </ion-icon>
+            <ion-icon name="stats-chart-outline" class="icon" onclick="change(this)">
+            </ion-icon>
+            <ion-icon name="repeat-outline" class="icon" onclick="change(this)">
+            </ion-icon>
+            <ion-icon name="person-outline" class="icon" onclick="change(this)">
+            </ion-icon>
+        </div>
     </header>
 
-
-    <!-- <div class="container my-5" dir="rtl">
-
-        <div class="row">
-            <div class="col-6">
-                <div class="topText px-3">
-                    <h1 class="fs-2 fw-bold ">قیمت لحظه‌ای طلا، سکه، دلار و ارزها</h1>
-                    <h2 class="fs-4 mt-1 fw-bold" style="color:#e5e539;">chnnd | چند</h2>
-                    <p class="fs-5 lh-base mt-3">
-                        سایت چند ارائه‌دهنده سرویس لحظه‌ای قیمت‌ها و تبدیل ارزها با دقیق‌ترین و به‌روزترین نرخ‌هاست.
-                        ما در چند قصد داریم به‌زودی امکاناتی مانند اطلاع‌رسانی از طریق پیامک و ارسال اعلان (نوتیفیکیشن)
-                        را فراهم کنیم تا همیشه از آخرین تغییرات بازار مطلع باشید.
-                        با چند، بهترین خدمات نرخ طلا، سکه و ارزها را تجربه کنید ❤️
-                    </p>
-                </div>
-            </div>
-            <div class="col-6">
-
-            </div>
-        </div>
-
-    </div> -->
-
-    </div>
     <div class="container mt-5">
         <tgju type="ticker-tap" items="398096,398097,535605,398115,398102,137121,137203" columns="dot" speed="35"
             token="webservice"></tgju>
@@ -156,19 +147,63 @@
             </div>
         </div>
         <div class="text-center mt-3 d-md-none">
-            <a href="assets/goldlist.html" type="button" class="btn btn-primary fs-7 w-100">
+            <a href="pages/goldlist.html" type="button" class="btn btn-primary fs-7 w-100">
                 مشاهده لیست کامل طلا و سکه
             </a>
         </div>
     </div>
 
+    <div class="container my-5">
+        <div class="row" dir="rtl">
+            <div class="col-md-6 text-end bg-light p-3">
+                <h3 class="mb-4 text-center fs-4">لیست قیمت ارزها</h3>
+                <table class="table table-bordered table-striped text-center align-middle currency-table">
+                    <thead class="table-dark p-3">
+                        <tr>
+                            <th>آیکون</th>
+                            <th>نام ارز</th>
+                            <th>قیمت ارز</th>
+                            <th>یک دلار به چند؟</th>
+                        </tr>
+                    </thead>
+                    <tbody id="currencyTableBody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6 text-end p-3">
+                <div class="blog-widget-container">
+                    <div class="d-flex justify-content-between align-items-center mb-3 px-2">
+                        <h3 class="fs-5 fw-bold m-0">آخرین اخبار و مقالات</h3>
+                        <a href="https://blog.chnnd.ir/" class="text-decoration-none small fw-bold text-primary">مشاهده
+                            همه</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row main">
 
-            <section id="currencySection" class="col-12 mb-5">
-                <h2 class="h2">Currencies</h2>
+            <section id="currencySection" class="col-12 mb-5 mt-4">
+                <div class="d-flex justify-content-between align-items-center mb-3 flex-row-reverse">
+                    <h2 class="h2 m-0 ">ارز های دیجیتال</h2>
+ 
+                </div>
                 <hr>
-                <div class="row" id="currencyContainer"></div>
+
+                <div class="row">
+                    <div class="col-12 col-lg-4 mb-4">
+                        <div id="cryptoSpotlight"
+                            class="spotlight-card p-4 h-100 shadow-sm border rounded-4 bg-dark text-white">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-8">
+                        <div id="cryptoContainer" class="row g-3">
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </div>
@@ -186,10 +221,10 @@
                 </div>
 
                 <div class="col-12 col-md text-md-end text-center">
-                    <h2 class="h5 mb-1">Phone Number</h2>
-                    <a class="footer-link d-inline-flex align-items-center gap-2" href="tel:09369849997">
-                        <i class="bi bi-telephone-fill"></i>
-                        09369849997
+                    <h2 class="h5 mb-1">Designed By:</h2>
+                    <a class="footer-link d-inline-flex align-items-center gap-2" href="https://tehranbyte.ir/">
+                        <i class="bi bi-globe"></i>
+                        Tehran Byte
                     </a>
                 </div>
             </div>
@@ -206,9 +241,13 @@
             </div>
         </div>
     </footer>
+
+
+
+
     <?php include 'includes/loginModal.php'; ?>
 
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/jquery/jquery.min.js"></script>
     <script src="js/bootstrapJS/bootstrap.bundle.min.js"></script>
     <script src="js/scripts/easy-number-separator.js"></script>
