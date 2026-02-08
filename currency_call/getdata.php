@@ -1,20 +1,24 @@
 <?php
-//ازه دسترسی از همه دامنه‌ها
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 header("Access-Control-Allow-Origin: *");
-
-// اگر نیاز به متدهای خاص دارید
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-
-// اگر نیاز به هدرهای خاص دارید
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
+header("Content-Type: application/json; charset=UTF-8");
 
-// ادامه کد شما...
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit;
+}
 
-    $time = json_decode(file_get_contents("lastUpdate.json"));
-    $lastUpdate = $time->last_update;
-    if(time() >= ($lastUpdate + 60)){
-        // var_dump('le');
-        include "getter.php";
-    }
+$base = __DIR__;
 
-    echo file_get_contents("data.json");
+$time = json_decode(file_get_contents($base . "/lastUpdate.json"));
+$lastUpdate = $time->last_update ?? 0;
+
+if (time() >= ($lastUpdate + 60)) {
+    include $base . "/getter.php";
+}
+
+echo file_get_contents($base . "/data.json");
