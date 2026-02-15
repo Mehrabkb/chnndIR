@@ -102,6 +102,7 @@
     border: none;
     color: #052e1b;
     font-weight: 700;
+    font-family: "Vazirmatn", system-ui, sans-serif;
   }
   .btn.primary:hover { filter: brightness(1.05); }
   
