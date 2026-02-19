@@ -1,4 +1,6 @@
 <?php
+header("Content-Type: application/json; charset=utf-8");
+
 //ازه دسترسی از همه دامنه‌ها
 header("Access-Control-Allow-Origin: *");
 
@@ -10,11 +12,11 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 // ادامه کد شما...
 
-    $time = json_decode(file_get_contents("lastUpdate.json"));
-    $lastUpdate = $time->last_update;
-    if(time() >= ($lastUpdate + 60)){
-        // var_dump('le');
-        include "getter.php";
-    }
+$time = json_decode(file_get_contents("lastUpdate.json"));
+$lastUpdate = $time->last_update;
+if (time() >= ($lastUpdate + 60)) {
+    // var_dump('le');
+    include "getter.php";
+}
 
-    echo file_get_contents("data.json");
+echo file_get_contents("data.json");

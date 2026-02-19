@@ -51,6 +51,7 @@ const flagMap = {
 };
 
 $(function () {
+
     // Notification.requestPermission().then(p => {
     //     if (p === "granted") {
     //         new Notification("تست نوتیفیکیشن", {
@@ -66,8 +67,9 @@ $(function () {
         url: "https://chnnd.ir/currency_call/getdata.php",
         method: 'GET',
         success: function (result) {
-            result = JSON.parse(result);
-            // console.log(result.gold);
+            //result = JSON.parse(result);
+            // console.log("ajax started")
+            //console.log(result.gold);
             let golds = result.gold;
             let coinContainer = $("#coinContainer");
             let gold18Container = $("#18kGold");
